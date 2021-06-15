@@ -1,0 +1,144 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0")
+    title E.T. 24 D.E. 17
+    link(rel="stylesheet", href="/../public/css/layout.css", attr)
+    link(rel="stylesheet", href="/../public/css/responsiveness.css", attr)
+    link(href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;700;800&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@600&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
+    link(rel="shortcut icon", type="image/png" href="/../public/images/Logo_chikito.png")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous")
+    script(src="https://kit.fontawesome.com/a2b3ccd4c2.js" crossorigin="anonymous")
+    script(src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous")
+    script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
+  body(data-barba="wrapper")
+    block preload 
+    .page-transition
+      img(src="/../public/images/logo.png", alt="logo")
+      ul.rows-c
+        li
+        li
+        li
+        li
+        li
+    .navigation-wrapper
+      header
+        .logo
+          a.nav-link(href="/") #[img(src="/../public/images/logo.png", alt="logo")]
+        nav.main-navigation
+          a.nav-link.c-link(href="/") Inicio
+          .dropdown
+            span.nav-link.c-link Institucional #[i.fas.fa-chevron-down]
+            .dropdown-content
+              .op-layer
+              .dropdown-bg
+              .dropdown-nav-links
+                //- a.nav-link(href="javascript:void(0)") Talleres
+                .sub-dropdown
+                  a.nav-link.c-link(href="javascript:void(0)") Especialidades
+                  .dropdown-nav-links.sub-dropdown-content
+                    a.nav-link.c-link(href="/institucional/especialidades/computacion") Computación
+                    a.nav-link.c-link(href="/institucional/especialidades/ade") Administración de Empresas
+                a.nav-link.c-link(href="/institucional/proyectos-escolares") Proyectos Escolares
+                a.nav-link.c-link(href="/institucional/equipo-docente") Equipo Docente
+                a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
+                a.nav-link.c-link(href="/institucional/bi") Bachillerato Internacional
+          a.nav-link.c-link(href="javascript:void(0)" target="_blank") Administrador de Turnos
+          a.nav-link(href="http://et24de17-caba.edu.ar/moodle30/" target="_blank") Plataforma Virtual
+        .btns-container
+          span.nav-link.show-menu-btn #[i.fas.fa-bars]
+          span.nav-link.contact-btn #[i.fas.fa-envelope]
+          if(typeof user != 'undefined')
+            #user.dropdown
+              span.nav-link #{user.name} #[i.fas.fa-user] #[i.fas.fa-chevron-down]
+              #u-dp.dropdown-content
+                  #u-op.dropdown-nav-links
+                    a.nav-link.c-link(href="javascript:void(0)") #[i.fas.fa-user] Perfil
+                    a.nav-link.c-link(href="/users/gestion/mensajes") #[i.fas.fa-envelope] Mensajes
+                    if user.hasAdministratorPermissions
+                      a.nav-link.c-link(href="/users/gestion") #[i.fas.fa-edit] Gestión
+                    form(action="/users/logout?_method=DELETE" method="POST")
+                      button.nav-link(type="submit") #[i.fas.fa-sign-in-alt] Cerrar Sesión
+          else
+            a.nav-link.sign-btn(href="/users/login") #[i.fas.fa-sign-in-alt]
+      nav.res-navigation
+        .nav-layer
+        .nav-main
+          .nav-c
+            .nav-content-layout
+              a.nav-link.c-link(href="/") Inicio
+              a.nav-link.sub-nav-p(href="javascript:void(0)") Institucional
+              .sub-nav-links
+                a.nav-link.sub-nav-p(href="javascript:void(0)") Especialidades
+                .sub-nav-links
+                  a.nav-link.c-link(href="/institucional/especialidades/computacion") Computación
+                  a.nav-link.c-link(href="/institucional/especialidades/ade") Administración de Empresas
+                a.nav-link.c-link(href="/institucional/proyectos-escolares") Proyectos Escolares
+                //- a.nav-link(href="javascript:void(0)") Talleres
+                a.nav-link.c-link(href="/institucional/equipo-docente") Equipo Docente
+                a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
+                a.nav-link.c-link(href="/institucional/bi") Bachillerato Internacional
+    aside.contact
+      .layer
+      .contact-content
+        .close-ct
+          i.close-btn.fas.fa-times-circle
+        h1 CONTACTANOS
+        p Estaremos encantados de poder ayudarte
+        .sm-links
+          .sm-limk
+            a(href="javascript:void(0)") #[i.fas.fa-phone-alt] +54 11 4055-2245
+          .sm-limk
+            a(href="mailto:et24-defbsas@gmail.com") #[i.far.fa-envelope-open] et24-defbsas@gmail.com
+          .sm-limk
+            a(href="https://instagram.com/periodico.escolar.et24?igshid=1ecfs4bgj1twm" target="_blank") #[i.fab.fa-instagram] Periódico Escolar ET N°24
+          .sm-limk
+            a(href="https://www.facebook.com/Peri%C3%B3dico-Escolar-ET-N%C2%BA-24-1607076049519806/" target="_blank") #[i.fab.fa-facebook-f] Periódico Escolar ET N°24
+        iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.359323944864!2d-58.4957791!3d-34.6018899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f587acd9ac33fe6!2sEt24!5e0!3m2!1ses-419!2sar!4v1603147338605!5m2!1ses-419!2sar" 
+               frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
+        if(typeof user != 'undefined')  
+          if !user.hasAdministratorPermissions
+            .form-container.container-content.hlf-width
+              h3.p-title Envianos un mensaje
+              .errors
+              form#send-msg
+                .input-row 
+                  .lb-input  
+                    label(for="subject") Asunto
+                  input(type="text" id="subject" name="subject" required)
+                .input-row 
+                  .lb-input  
+                    label(for="message") Mensaje
+                  textarea(name="message" id="message" rows="5" required)
+                button.btn(type="submit") Enviar 
+        else
+          .form-container.container-content.hlf-width
+            h3.p-title Envianos un mensaje
+            .errors
+            form#send-msg
+              if(typeof user == 'undefined')
+                .input-row
+                  .lb-input  
+                    label(for="email") Email
+                  input(type="email" id="email" name="email" required)
+              .input-row 
+                .lb-input  
+                  label(for="subject") Asunto
+                input(type="text" id="subject" name="subject" required)
+              .input-row 
+                .lb-input  
+                  label(for="message") Mensaje
+                textarea(name="message" id="message" rows="5" required)
+              button.btn(type="submit") Enviar 
+    block contenido
+    //- .footer
+  script(defer src="https://unpkg.com/@barba/router" integrity="" crossorigin="anonymous")
+  script(defer src="https://unpkg.com/@barba/core" integrity="" crossorigin="anonymous")
+  script(defer src="/../public/js/pageTransition.js")
+  script(src="/../public/js/header.js")
+  script(src="/../public/js/g-scripts/project.js")

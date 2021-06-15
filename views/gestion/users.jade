@@ -1,0 +1,30 @@
+extends ../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="users")
+      #mng-op.container-content.g-cont
+        .cards-container.esp-layout
+          .container-content.ttl-width
+            h1.p-title Gestión de Usuarios
+            #msg-container
+              #msg-list
+                each currentUser, index in users
+                  .inner
+                    .cards-container.esp-layout
+                      .container-content.md-width
+                        p Fecha de creación : #[span.date #{currentUser.date.getDate()}/#{currentUser.date.getUTCMonth() + 1}/#{currentUser.date.getFullYear()}]
+                        p Email : #[span.date #{currentUser.email}]
+                      .container-content.md-width
+                        p Nombre : #[span.date #{currentUser.name}]
+                        .user-p
+                          span Permisos : 
+                          select.date(style="display: inline-block;")
+                            -if(currentUser.hasAdministratorPermissions)
+                              option(value="Administrador" selected) Administrador
+                              option(value="Usuario") Usuario
+                            -else
+                              option(value="Administrador") Administrador
+                              option(value="Usuario" selected) Usuario
+                    .msg-link-c
+                      a.msg-link(href="javascript:void(0)") Ver      
+          include ../partials/gestionNavigation.jade
+          

@@ -1,0 +1,30 @@
+{
+  "name": "pagina-et24",
+  "version": "1.0.0",
+  "description": "pagina de la escuela",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Denis Luna, Lucas De La Pina, Nahuel Serruya, Lucas Gonzalez",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "dompurify": "^2.2.2",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "jade": "^1.11.0",
+    "jsdom": "^16.4.0",
+    "marked": "^1.2.5",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.8",
+    "nodemailer": "^6.4.15",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

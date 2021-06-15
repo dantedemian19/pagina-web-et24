@@ -1,0 +1,26 @@
+extends ./layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="login")
+    .block
+      .form-container
+        h1 Inicia Sesión
+        include ./partials/err_messages.jade
+        form(action="/users/login" method="POST")
+          .input-row
+            .lb-input  
+              label(for="email") Email
+            input(type="email" 
+            id="email" 
+            name="email" 
+            value= messages.userEmail? messages.userEmail : ''
+            required)
+          .input-row 
+            .lb-input  
+              label(for="password") Contraseña
+            input(type="password" 
+            id="password" 
+            name="password"
+            value= messages.userPass? messages.userPass : '' 
+            required)
+          button.btn(type="submit") Enviar 
+        a(href="/users/register") Aún no tienes cuenta? - Registrate

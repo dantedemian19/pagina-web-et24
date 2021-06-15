@@ -1,0 +1,9 @@
+-if (associatedProjects.length > 0)
+  for project in associatedProjects
+    .project(id="#{project._id}")
+      .inline-query-c
+        span.f-el #{project.title}
+        button.s-el#remove-project(type="button") #[i.far.fa-trash-alt]
+        a.s-el(href="/users/gestion/proyectos/#{project._id}") #[i.far.fa-edit]
+-else
+  p Aún no existen proyectos asociados a este grupo.

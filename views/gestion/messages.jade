@@ -1,0 +1,81 @@
+extends ../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="messages")
+    #mng-op.container-content.g-cont
+      .cards-container.esp-layout
+        .container-content.ttl-width
+          h1.p-title Gestión de Mensajes
+          .p-section#fixed-ops
+            .p-container
+              .p-list-item
+                .p-item-title
+                  span Configurar Filtros de Búsqueda
+                  i.fas.fa-times-circle
+                  i.fas.fa-minus-circle
+                .list-item-container
+                  .item-content
+                    form
+                      #filter-op
+                        .radio-c
+                          p Estado : 
+                          label.container Todos
+                            input(type="radio" checked="checked" name="status")
+                            span.checkmark
+                          label.container Pendiente
+                            input(type="radio" name="status")
+                            span.checkmark
+                          label.container Responidido
+                            input(type="radio" name="status")
+                            span.checkmark
+                        .radio-c
+                          p Usuario : 
+                          label.container Todos
+                            input(type="radio" checked="checked" name="user-e")
+                            span.checkmark
+                          label.container No existe
+                            input(type="radio" name="user-e")
+                            span.checkmark
+                          label.container Existe
+                            input(type="radio" name="user-e")
+                            span.checkmark
+                      button.btn(type="submit") Buscar 
+          #msg-container
+            #msg-list
+              -let username = ''
+              -if(messages.length < 1)
+                .item-content
+                  p.info-msg No hay mensajes aun.#[i.far.fa-frown]
+              each message, index in messages
+                .inner
+                  .cards-container.esp-layout
+                    .container-content.md-width
+                      -username = message.author ? message.author.name : "No existe"
+                      p Fecha de envío : #[span.date #{message.date.getDate()}/#{message.date.getUTCMonth() + 1}/#{message.date.getFullYear()}]
+                      p Asunto : #[span.date #{message.subject}]
+                      -if(message.answer)
+                        p Estado : #[span(style="color: #2ecc71;").date Responidido]
+                      -else
+                        p Estado : #[span(style="color: #e74c3c;").date Pendiente]
+                    .container-content.md-width
+                      p De : #[span.date #{message.email}]
+                      p Usuario :
+                        -if (message.author)
+                          #[a.date(href="javascript:void(0)") #{username}]
+                        -else
+                          span.date #{username}
+                      .msg-link-c
+                        -let text = message.answer? "Ver" : "Contestar"
+                        a.msg-link(href="/users/gestion/mensajes/#{message.id}") #{text}
+                //- .msg-content
+                //-   .b-info
+                //-     -username = message.author ? message.author.name : "No existe"
+                //-     .msg-desc
+                //-       span Usuario : #{username}
+                //-       span.date Recibido : #{message.date.getDate()}/#{message.date.getUTCMonth() + 1}/#{message.date.getFullYear()}
+                //-   .msg-desc
+                //-     span.subject Asunto : #{message.subject}
+                //-     span.email Email : #{message.email}
+                //-   .msg-link-c
+                //-     a.msg-link(href="/users/gestion/mensajes/#{message.id}") Contestar
+            .loading
+        include ../partials/gestionNavigation.jade
