@@ -2,25 +2,44 @@ extends ./layout.jade
 block contenido
   main(data-barba="container" data-barba-namespace="login")
     .block
-      .form-container
-        h1 Inicia Sesión
-        include ./partials/err_messages.jade
-        form(action="/users/login" method="POST")
-          .input-row
-            .lb-input  
-              label(for="email") Email
-            input(type="email" 
-            id="email" 
-            name="email" 
-            value= messages.userEmail? messages.userEmail : ''
-            required)
-          .input-row 
-            .lb-input  
-              label(for="password") Contraseña
-            input(type="password" 
-            id="password" 
-            name="password"
-            value= messages.userPass? messages.userPass : '' 
-            required)
-          button.btn(type="submit") Enviar 
-        a(href="/users/register") Aún no tienes cuenta? - Registrate
+      .body-formulario
+          .container-formulario
+            .header-formulario Iniciar Sesiónn
+            form(action="/users/login" method="POST")
+              .input-field
+                input(type='email' 
+                required='' 
+                value= messages.userEmail? messages.userEmail : '' 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$"
+                )
+                label Usuario o Email
+              .input-field
+                input.pswrd(type='password' 
+                required='' 
+                value= messages.userPass? messages.userPass : ''
+                minlength="6"
+                maxlength="20"
+                )
+                span.show Mostrar
+                label Contraseña
+              .button-formulario
+                .inner-formulario
+                button(type="submit") Iniciar Sesión
+              .sin-cuenta
+                  ¿No tiene una cuenta?
+                a(href='/users/register' class="crear-cuenta") Crear una
+          script.
+            var input = document.querySelector('.pswrd');
+            var show = document.querySelector('.show');
+            show.addEventListener('click', active);
+            function active(){
+            if(input.type === "password"){
+            input.type = "text";
+            show.style.color = "#1DA1F2";
+            show.textContent = "Ocultar";
+            }else{
+            input.type = "password";
+            show.textContent = "Mostrar";
+            show.style.color = "#111";
+            }
+            }te
