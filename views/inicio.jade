@@ -6,7 +6,7 @@ block contenido
     .block-slider
       .slider-img
       .slider-content.row
-        img(src="../public/images/logo.png", alt="Logo")
+        img(src="../public/images/logo1.png", alt="Logo")
         h1 
           span E.T. 24 D.E. 17
         h2 
@@ -27,7 +27,7 @@ block contenido
             i(class="fas fa-angle-up")
             h1 Computación
             p Con esta especialidad, el/la alumno/a se adentrara en el mundo del mañana: el mundo de la tecnología. Aprendiendo desde lo más básico (pseudolenguajes de programación, manejo de variables, condicionales básicos, entre otros) hasta lo más profesional (programación orientada a objetos, robotica, análisis de sistemas, entre otros).
-            a.c-btn(href="/institucional/especialidades/computacion") Ver más
+            a.c-btn(href="/institucional/especialidades/computacion" class="boton-objetivos") Ver más
         .obj-box
           .slider-content
             h1 A.D.E.
@@ -36,7 +36,7 @@ block contenido
             i(class="fas fa-angle-up")
             h1 A.D.E.
             p La administración de empresas es la disciplina de gestión eficiente y dinámica de los recursos de una institución empresarial para lograr y mantener la sostenibilidad de su crecimiento. Es una disciplina transversal que prepara a sus estudiantes para el manejo y compresión de las situaciones administrativas, financieras, económicas y laborales.
-            a.c-btn(href="/institucional/especialidades/ade") Ver más
+            a.c-btn(href="/institucional/especialidades/ade" class="boton-objetivos") Ver más
     .block.img-vision
       .content-desc.row
         h1#tit-vis.p-title ¿Cuál es nuestra visión?
@@ -78,90 +78,157 @@ block contenido
           .obj.box
             .val-tit
               h1 Compromiso Social
-            i(class="fas fa-comment")
+            i(class="fas fa-comment iconos-valores")
         .val-box
           .obj.box
             .val-tit
               h1 Compañerismo
-            i(class="fas fa-users")
+            i(class="fas fa-users iconos-valores")
         .val-box
           .obj.box
             .val-tit
               h1 Respeto
-            i(class="fas fa-handshake")
+            i(class="fas fa-handshake iconos-valores")
         .val-box
           .obj.box
             .val-tit
               h1 Solidaridad
-            i(class="fas fa-people-carry")
-    .footer
-      .slogan
-        h1 E.T. N° 24...
-        h1 Más de 70 años guiando a las futuras generaciones
-      .cards-container.foot.margin0
-        .cards-footer
-          h1 CONTÁCTANOS
-          .sm-links.foot-links
-            .sm-limk
-              a(href="javascript:void(0)") #[i.fas.fa-phone-alt] +54 11 4055-2245
-            .sm-limk
-              a(href="mailto:et24-defbsas@gmail.com") #[i.far.fa-envelope-open] et24-defbsas@gmail.com
-        .cards-footer
-          h1 REDES SOCIALES
-          .sm-links.foot-links
-            .sm-limk
-              a(href="https://instagram.com/periodico.escolar.et24?igshid=1ecfs4bgj1twm" target="_blank") #[i.fab.fa-instagram] Periódico Escolar ET N°24
-            .sm-limk
-              a(href="https://www.facebook.com/Peri%C3%B3dico-Escolar-ET-N%C2%BA-24-1607076049519806/" target="_blank") #[i.fab.fa-facebook-f] Periódico Escolar ET N°24
-        .cards-footer.equipo-des
-          h1 EQUIPO DE DESARROLLO
-          .cards-container.margin0
-            .dept.ancho
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/SantiagoFondo.png", alt="Lucas De La Pina")
-                  p Santiago Betancort | Lider
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Lider
-            .dept.ancho 
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/DenisFondo.png", alt="Lucas De La Pina")
-                  p Denis Luna | Programador
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
-            .dept.ancho  
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/LukiluFondo.png", alt="Lucas De La Pina")
-                  p Lucas González | Programador
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
-            .dept.ancho    
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/TituFondo.png", alt="Lucas De La Pina")
-                  p Lucas De La Pina | Programador
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
-            .dept.ancho    
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/ThiagoFondo.png", alt="Lucas De La Pina")
-                  p Thiago Montenegro | Documentador
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Documentador
-            .dept.ancho    
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/VictorFondo.png", alt="Lucas De La Pina")
-                  p Victor Paredes | Documentador
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Documentador
-            .dept.ancho    
-              .list-dept.desarrolladores
-                .list-dept-cont.desarrollador
-                  .img-desarrollador
-                    img(src="../public/images/NasanteFondo.png", alt="Lucas De La Pina")
-                  p Nahuel Serruya | Diseñador
-                  //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Diseñador
+            i(class="fas fa-people-carry iconos-valores")
+    footer.footer
+      .container-footer
+        .row-footer
+          .footer-col
+            .primera
+              h4 E.T.N°24 D.E.17
+              .descripcion
+                a()
+                  | Más de 70 años guiando a las futuras generaciones, buscando crear mejores personas y asegurando su futuro.
+          .footer-col
+            .columna1
+              h4 Programadores
+              ul.ul-footer
+                li
+                  a() Gimenéz Lucas Matias
+                li
+                  a() Alfonso Dante
+                li
+                  a() Lucas González
+                li
+                  a() Denis Luna
+                li
+                  a() Lucas De La Pina
+          .footer-col
+            .columna2
+              h4 Diseñadores
+              ul.ul-footer
+                li
+                  a() Sanchéz Germán
+                li
+                  a() García Matias
+                li
+                  a() Victor Paredes
+                // <li><a href="#"></a></li>
+          .footer-col
+            .columna3
+              h4 Líderes y Documentadores
+              ul.ul-footer
+                li
+                  a() Santiago Betancort
+                li
+                  a() Thiago Montenegro
+                li
+                  a() Victor Paredes
+                // <li><a href="#"></a></li>
+          .footer-col.footer-redes
+            .columna-redes
+              h4 Redes
+              .social-links
+                ul.ul-footer
+                  li
+                    a.facebook(href='https://www.facebook.com/ET-Nº-24-84991834162')
+                      i.fab.fa-facebook-f
+                  li
+                    a.gmail(href='mailto:et24-defbsas@gmail.com')
+                      i.fab.fa-google-plus-g
+                  li
+                    a.ig(href="https://www.instagram.com/proyectoset24/")
+                      i.fab.fa-instagram
+                  li
+                    a.discord(href="https://discord.gg/xASe67r")
+                      i.fab.fa-discord
+    .inferior
+      p.derechos
+        | 2021 Copyright © Derechos reservados Escuela Técnica N°24 D.E.17 "Defensa de Buenos Aires"
+
+
+    //- .footer
+    //-   .slogan
+    //-     h1 E.T. N° 24...
+    //-     h1 Más de 70 años guiando a las futuras generaciones
+    //-   .cards-container.foot.margin0
+    //-     .cards-footer
+    //-       h1 CONTÁCTANOS
+    //-       .sm-links.foot-links
+    //-         .sm-limk
+    //-           a(href="javascript:void(0)") #[i.fas.fa-phone-alt] +54 11 4055-2245
+    //-         .sm-limk
+    //-           a(href="mailto:et24-defbsas@gmail.com") #[i.far.fa-envelope-open] et24-defbsas@gmail.com
+    //-     .cards-footer
+    //-       h1 REDES SOCIALES
+    //-       .sm-links.foot-links
+    //-         .sm-limk
+    //-           a(href="https://instagram.com/periodico.escolar.et24?igshid=1ecfs4bgj1twm" target="_blank") #[i.fab.fa-instagram] Periódico Escolar ET N°24
+    //-         .sm-limk
+    //-           a(href="https://www.facebook.com/Peri%C3%B3dico-Escolar-ET-N%C2%BA-24-1607076049519806/" target="_blank") #[i.fab.fa-facebook-f] Periódico Escolar ET N°24
+    //-     .cards-footer.equipo-des
+    //-       h1 EQUIPO DE DESARROLLO
+    //-       .cards-container.margin0
+    //-         .dept.ancho
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/SantiagoFondo.png", alt="Lucas De La Pina")
+    //-               p Santiago Betancort | Lider
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Lider
+    //-         .dept.ancho 
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/DenisFondo.png", alt="Lucas De La Pina")
+    //-               p Denis Luna | Programador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
+    //-         .dept.ancho  
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/LukiluFondo.png", alt="Lucas De La Pina")
+    //-               p Lucas González | Programador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/TituFondo.png", alt="Lucas De La Pina")
+    //-               p Lucas De La Pina | Programador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/ThiagoFondo.png", alt="Lucas De La Pina")
+    //-               p Thiago Montenegro | Documentador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Documentador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/VictorFondo.png", alt="Lucas De La Pina")
+    //-               p Victor Paredes | Documentador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Documentador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/NasanteFondo.png", alt="Lucas De La Pina")
+    //-               p Nahuel Serruya | Diseñador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Diseñador

@@ -10,6 +10,12 @@ html(lang='en')
     link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;700;800&display=swap" rel="stylesheet")
     link(href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@600&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet")
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet")
+    link(rel="stylesheet", href="/../public/css/style-footer.css")
+    link(rel="stylesheet", href="/../public/css/bootstrap.min.css")
     link(rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css")
     link(rel="shortcut icon", type="image/png" href="/../public/images/Logo_chikito.png")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous")
@@ -19,7 +25,7 @@ html(lang='en')
   body(data-barba="wrapper")
     block preload 
     .page-transition
-      img(src="/../public/images/logo.png", alt="logo")
+      img(src="/../public/images/logo1.png", alt="logo")
       ul.rows-c
         li
         li
@@ -29,7 +35,7 @@ html(lang='en')
     .navigation-wrapper
       header
         .logo
-          a.nav-link(href="/") #[img(src="/../public/images/logo.png", alt="logo")]
+          a.nav-link(href="/") #[img(src="/../public/images/logo1.png", alt="logo")]
         nav.main-navigation
           a.nav-link.c-link(href="/") Inicio
           .dropdown
@@ -45,6 +51,7 @@ html(lang='en')
                     a.nav-link.c-link(href="/institucional/especialidades/computacion") Computación
                     a.nav-link.c-link(href="/institucional/especialidades/ade") Administración de Empresas
                 a.nav-link.c-link(href="/institucional/proyectos-escolares") Proyectos Escolares
+                a.nav-link.c-link(href="/institucional/proyectos-extracurriculares") Proyectos Extracurriculares
                 a.nav-link.c-link(href="/institucional/equipo-docente") Equipo Docente
                 a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
                 a.nav-link.c-link(href="/institucional/bi") Bachillerato Internacional
@@ -79,6 +86,7 @@ html(lang='en')
                   a.nav-link.c-link(href="/institucional/especialidades/computacion") Computación
                   a.nav-link.c-link(href="/institucional/especialidades/ade") Administración de Empresas
                 a.nav-link.c-link(href="/institucional/proyectos-escolares") Proyectos Escolares
+                a.nav-link.c-link(href="/institucional/proyectos-extracurriculares") Proyectos Extracurriculares
                 //- a.nav-link(href="javascript:void(0)") Talleres
                 a.nav-link.c-link(href="/institucional/equipo-docente") Equipo Docente
                 a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
@@ -136,7 +144,7 @@ html(lang='en')
                 textarea(name="message" id="message" rows="5" required)
               button.btn(type="submit") Enviar 
     block contenido
-    //- .footer
+    //---------------FOOTER-------------------------------
   script(defer src="https://unpkg.com/@barba/router" integrity="" crossorigin="anonymous")
   script(defer src="https://unpkg.com/@barba/core" integrity="" crossorigin="anonymous")
   script(defer src="/../public/js/pageTransition.js")
