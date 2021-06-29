@@ -1825,12 +1825,15 @@ img.bi-logo{
   flex-direction: row;
 }
 .footer-col h4{
-	font-size: 18px;
+	font-size: 16px;
 	color: #ffffff;
-	text-transform: capitalize;
+	text-transform: uppercase;
 	margin-bottom: 35px;
 	font-weight: 500;
 	position: relative;
+}
+.footer-col h4.etn24{
+	font-size: 18px !important;
 }
 .footer-col h4::before{
 	content: '';
