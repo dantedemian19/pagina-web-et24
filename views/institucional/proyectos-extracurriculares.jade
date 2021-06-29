@@ -1,5 +1,118 @@
 extends ../layout.jade
 block contenido
-  main(data-barba="container" data-barba-namespace="proyectos-extracurriculares")
-  .title-bi
-      h1 Proyectos Extracurriculares
+  head 
+    link(rel='stylesheet' href='../public/css/all.min.css')
+    body
+      main(data-barba='container' data-barba-namespace='proyectos-extracurriculares')
+        .title-bi
+          h1 Proyectos Extracurriculares
+        .wrapper-galeria
+          nav
+            .items-galeria
+              span.item-galeria.active-galeria(data-name='all') Todos
+              span.item-galeria(data-name='ted') Ted
+              span.item-galeria(data-name='onu') Modelo ONU
+              span.item-galeria(data-name='factura') Mi Factura Por favor
+          // filter Images
+          .galeria
+            .image-galeria(data-name='ted')
+              span
+                img(src='../public/images/images-galeria/bag-1.jpg' alt='')
+            .image-galeria(data-name='headphone')
+              span
+                img(src='../public/images/images-galeria/headphone-1.jpg' alt='')
+            .image-galeria(data-name='camera')
+              span
+                img(src='../public/images/images-galeria/camera-1.jpg' alt='')
+            .image-galeria(data-name='onu')
+              span
+                img(src='../public/images/images-galeria/shoe-1.jpg' alt='')
+            .image-galeria(data-name='headphone')
+              span
+                img(src='../public/images/images-galeria/headphone-2.jpg' alt='')
+            .image-galeria(data-name='factura')
+              span
+                img(src='../public/images/images-galeria/watch-1.jpg' alt='')
+            .image-galeria(data-name='onu')
+              span
+                img(src='../public/images/images-galeria/shoe-2.jpg' alt='')
+            .image-galeria(data-name='camera')
+              span
+                img(src='../public/images/images-galeria/camera-2.jpg' alt='')
+        // fullscreen img preview box
+        .preview-box-galeria
+          .details-galeria
+            span.title-galeria
+              | Image Category: 
+              p
+            span.icon-galeria.fas.fa-times
+          .image-box-galeria
+            img(src='' alt='')
+        .shadow-galeria
+        footer.footer
+          .container-footer
+            .row-footer
+              .footer-col
+                .primera
+                  h4 E.T.N°24 D.E.17
+                  .descripcion
+                    a()
+                      | Más de 70 años guiando a las futuras generaciones, buscando crear mejores personas y asegurando su futuro.
+              .footer-col
+                .columna1
+                  h4 Programadores
+                  ul.ul-footer
+                    li
+                      a() Gimenéz Lucas Matias
+                    li
+                      a() Alfonso Dante
+                    li
+                      a() Lucas González
+                    li
+                      a() Denis Luna
+                    li
+                      a() Lucas De La Pina
+              .footer-col
+                .columna2
+                  h4 Diseñadores
+                  ul.ul-footer
+                    li
+                      a() Sanchéz Germán
+                    li
+                      a() García Matias
+                    li
+                      a() Victor Paredes
+                    // <li><a href="#"></a></li>
+              .footer-col
+                .columna3
+                  h4 Líderes y Documentadores
+                  ul.ul-footer
+                    li
+                      a() Santiago Betancort
+                    li
+                      a() Thiago Montenegro
+                    li
+                      a() Victor Paredes
+                    // <li><a href="#"></a></li>
+              .footer-col.footer-redes
+                .columna-redes
+                  h4 Redes
+                  .social-links
+                    ul.ul-footer
+                      li
+                        a.facebook(href='https://www.facebook.com/ET-Nº-24-84991834162')
+                          i.fab.fa-facebook-f
+                      li
+                        a.gmail(href='mailto:et24-defbsas@gmail.com')
+                          i.fab.fa-google-plus-g
+                      li
+                        a.ig(href="https://www.instagram.com/proyectoset24/")
+                          i.fab.fa-instagram
+                      li
+                        a.discord(href="https://discord.gg/xASe67r")
+                          i.fab.fa-discord
+        .inferior
+          p.derechos
+            | 2021 Copyright © Derechos reservados Escuela Técnica N°24 D.E.17 "Defensa de Buenos Aires"
+
+      script(src='../../public/js/galeria.js')
