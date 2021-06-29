@@ -39,9 +39,27 @@ html(lang='en')
           font-size: 2.5rem;
         }
       }
+      .vuelta-inicio {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.625rem 3rem;
+        background-color: #dfaf1d;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 25px;
+        text-transform: uppercase;
+        transition: all 0.25s ease-in-out;
+      }
+      .vuelta-inicio:hover {
+        transform: translateY(-5px) scale(1.08);
+        box-shadow: 0px 10px 10px -6px black;
+      }
   body
     .error-c
       img(src="/../public/svg/notfound.svg", alt="No se encontró")
       h1 No se econtró
       p Lo sentimos, pero la pagina que esta buscando no existe.
-      a(href="/") Ir al Inicio
+      a.vuelta-inicio(href="/") Ir al Inicio
