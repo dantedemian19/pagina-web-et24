@@ -5,40 +5,37 @@ block contenido
     main(data-barba='container' data-barba-namespace='proyextra')
       .title-bi
         h1 Proyectos Extracurriculares
-      .wrapper-galeria
-        nav
-          .items-galeria
-            span.item-galeria.active-galeria(data-name='all') Todos
-            span.item-galeria(data-name='ted') Ted
-            span.item-galeria(data-name='onu') Modelo ONU
-            span.item-galeria(data-name='factura') Mi Factura Por favor
-            span.item-galeria(data-name='radio') Radio ET24
-        .galeria
-          .image-galeria(data-name='ted')
-            span
-              img(src='../public/images/images-galeria/ted.jpg' alt='')
-          .image-galeria(data-name='headphone')
-            span
-              img(src='../public/images/images-galeria/headphone-1.jpg' alt='')
-          .image-galeria(data-name='radio')
-            span
-              img(src='../public/images/images-galeria/radio.jpg' alt='')
-          .image-galeria(data-name='onu')
-            span
-              img(src='../public/images/images-galeria/shoe-1.jpg' alt='')
-          .image-galeria(data-name='headphone')
-            span
-              img(src='../public/images/images-galeria/headphone-2.jpg' alt='')
-          .image-galeria(data-name='factura')
-            span
-              img(src='../public/images/images-galeria/mifpv.jpg' alt='')
-          .image-galeria(data-name='onu')
-            span
-              img(src='../public/images/images-galeria/shoe-2.jpg' alt='')
-          .image-galeria(data-name='camera')
-            span
-              img(src='../public/images/images-galeria/camera-2.jpg' alt='')
-              
+      section.section-galeria
+        .container-galeria
+          .left-galeria.imagen1-galeria
+          .right-galeria
+            .content-galeria
+              h1(style='font-size: 35px;') Modelo ONU
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='#') Leer más
+        .container-galeria
+          .left-galeria.imagen2-galeria
+          .right-galeria
+            .content-galeria
+              h1 TedEd
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='#') Leer más
+      section.segunda-fila-galeria.section-galeria
+        .container-galeria
+          .left-galeria.imagen3-galeria
+          .right-galeria
+            .content-galeria
+              h1 Radio ET24
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='#') Leer más
+        .container-galeria
+          .left-galeria.imagen4-galeria
+          .right-galeria
+            .content-galeria
+              h1(style='font-size: 34px;') Mi factura Pv
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='#') Leer más
+
       footer.footer
         .container-footer
           .row-footer
