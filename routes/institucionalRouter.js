@@ -10,12 +10,12 @@ router.get('/especialidades/ade', (req, res) => {
   res.render('institucional/especialidades/ADE');
 });
 
-router.get('/proyesc', (req, res) => {
-  ProjectGroup.find().populate('associatedProjects').exec((err, groups) => {
-    if(err) return res.redirect('/');
-    res.render('/institucional/proyesc', {groups});
-  });
-});
+// router.get('/proyesc', (req, res) => {
+//   ProjectGroup.find().populate('associatedProjects').exec((err, groups) => {
+//     if(err) return res.redirect('/');
+//     res.render('/institucional/proyesc', {groups});
+//   });
+// });
 
 router.get('/regimen-evaluacion', (req, res) => {
   res.render('institucional/reg');
@@ -23,6 +23,14 @@ router.get('/regimen-evaluacion', (req, res) => {
 
 router.get('/proyextra', (req, res) => {
   res.render('institucional/proyextra');
+});
+
+router.get('/equipod', (req, res) => {
+  res.render('institucional/equipod');
+});
+
+router.get('/proyesc', (req, res) => {
+  res.render('institucional/proyesc');
 });
 
 router.get('/bi', (req, res) => {
