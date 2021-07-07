@@ -604,7 +604,7 @@ main{
   top: -4%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 3rem;
   color: #dfaf1d;
 }
 .obj-tit h1{
@@ -638,10 +638,10 @@ main{
 .obj-box:hover .shadow{
   display: none;
 }
-.boton-objetivos {
+.c-btn {
   transition: all 0.3s ease-in-out;
 }
-.boton-objetivos:hover {
+.c-btn:hover {
   transform: translateY(-5px) scale(1.08);
   box-shadow: 0px 10px 10px -6px black;;
 }
@@ -737,9 +737,20 @@ main{
   transform: scale(1.15) translateX(-18px);
 }
 .showmore-btn:hover i{
-  animation: rotate 1s;
+  animation: rotate 2s;
 }
-@keyframes rotate {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 
 /*------------------------IMAGEN VISION------------------------*/
 
