@@ -2,45 +2,38 @@ extends ./layout.jade
 block contenido
   main(data-barba="container" data-barba-namespace="login")
     .block
-      .body-formulario
-          .container-formulario
-            .header-formulario Iniciar Sesión
-            form(action="/users/login" method="POST")
-              .input-field
-                input(type='email' 
-                required='' 
-                value= messages.userEmail? messages.userEmail : '' 
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$"
-                )
-                label Usuario o Email
-              .input-field
-                input.pswrd(type='password' 
-                required='' 
-                value= messages.userPass? messages.userPass : ''
-                minlength="6"
-                maxlength="20"
-                )
-                span.show Mostrar
-                label Contraseña
-              .button-formulario
-                .inner-formulario
-                button(type="submit") Iniciar Sesión
-              .sin-cuenta
-                ¿No tiene una cuenta?
-                br
-                a(href='/users/register' class="crear-cuenta") Crear una
-          script.
-            var input = document.querySelector('.pswrd');
-            var show = document.querySelector('.show');
-            show.addEventListener('click', active);
-            function active(){
-            if(input.type === "password"){
-            input.type = "text";
-            show.style.color = "#1DA1F2";
-            show.textContent = "Ocultar";
-            }else{
-            input.type = "password";
-            show.textContent = "Mostrar";
-            show.style.color = "#111";
-            }
-            }
+      #container-form.container-form
+        .form-container-form.sign-up-container-form
+          form.form-form(action='#')
+            h1.ttl-form Crear Cuenta
+            input(type='text' placeholder='Usuario')
+            input(type='email' placeholder='Email')
+            input(type='password' placeholder='********')
+            button.btn-form Registarse
+        .form-container-form.sign-in-container-form
+          form.form-form(action='#')
+            h1.ttl-form Iniciar Sesión
+            input(type='email' placeholder='Email')
+            input(type='password' placeholder='********')
+            button.btn-form Iniciar sesión
+            a.olvidar-form(href='#') ¿Olvidaste tu contraseña?
+        .overlay-container-form
+          .overlay-form
+            .overlay-panel-form.overlay-left-form
+              h1 Bienvenid@ de vuelta!
+              p Si ya tienes una cuenta, haz click en el botón de abajo
+              button#signIn-form.ghost-form.btn1-form Iniciar Sesión
+            .overlay-panel-form.overlay-right-form
+              h1 Hola, amig@
+              p Si no tienes una cuenta, ¿Qué esperas a crear una?
+              button#signUp-form.ghost-form.btn1-form Crear Cuenta
+      script.
+        const signUpButton = document.getElementById('signUp-form');
+        const signInButton = document.getElementById('signIn-form');
+        const container = document.getElementById('container-form');
+        signUpButton.addEventListener('click', () => {
+        container.classList.add("right-panel-active-form");
+        });
+        signInButton.addEventListener('click', () => {
+        container.classList.remove("right-panel-active-form");
+        });
