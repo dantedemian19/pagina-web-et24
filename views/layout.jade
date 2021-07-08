@@ -149,3 +149,23 @@ html(lang='en')
   script(defer src="/../public/js/pageTransition.js")
   script(src="/../public/js/header.js")
   script(src="/../public/js/g-scripts/project.js")
+  script.
+    const btn = document.querySelector('.nav-link.sign-btn');
+    var main = document.querySelector('html');
+
+    main.addEventListener('mousemove', () => {
+      const botonCrear = document.getElementById('signUp-form');
+      const botonIniciar = document.getElementById('signIn-form');
+      const container = document.getElementById('container-form');
+
+      botonCrear.addEventListener('click', () => {
+          container.classList.add("right-panel-active-form");
+      });
+
+      botonIniciar.addEventListener('click', () => {
+          container.classList.remove("right-panel-active-form");
+      });
+
+      console.log('Desliza');
+    })
+    
