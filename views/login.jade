@@ -7,8 +7,8 @@ block contenido
           form.form-form(action='#')
             h1.ttl-form Crear Cuenta
             input(type='text' placeholder='Usuario')
-            input(type='email' placeholder='Email')
-            input(type='password' placeholder='********')
+            input(type='email' placeholder='Email' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$")
+            input(type='password' placeholder='********' required maxlength=20 minlength=6)
             button.btn-form Registarse
         .form-container-form.sign-in-container-form
           form.form-form(action='#')
@@ -31,9 +31,11 @@ block contenido
         const signUpButton = document.getElementById('signUp-form');
         const signInButton = document.getElementById('signIn-form');
         const container = document.getElementById('container-form');
+
         signUpButton.addEventListener('click', () => {
-        container.classList.add("right-panel-active-form");
+            container.classList.add("right-panel-active-form");
         });
+
         signInButton.addEventListener('click', () => {
-        container.classList.remove("right-panel-active-form");
+            container.classList.remove("right-panel-active-form");
         });
