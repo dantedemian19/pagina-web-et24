@@ -9,7 +9,7 @@ router.get('/login', checkNotAuthenticated,(req, res) => {
 });
 
 router.get('/register', checkNotAuthenticated, (req, res) => {
-  res.render('register');
+  res.render('login');
 });
 
 router.post('/login', checkNotAuthenticated, passport.authenticate('local', {
@@ -50,7 +50,7 @@ router.post('/register', checkNotAuthenticated, async(req, res) => {
       password,
       password_confirmation
     }
-    res.render('register', {err_messages});
+    res.render('login', {err_messages});
   }
 });
 
