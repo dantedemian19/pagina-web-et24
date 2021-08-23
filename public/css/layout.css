@@ -48,7 +48,8 @@
   align-items: center;
 }
 
-.msg p.msg-d, .msg .close-msg {
+.msg p.msg-d,
+.msg .close-msg {
   padding: 0.3125rem 0.625rem;
 }
 
@@ -71,6 +72,11 @@ body {
   height: 100vh;
   overflow: auto;
   background: #fff;
+}
+
+*::selection {
+  background-color: #bc1b2d;
+  color: #fff;
 }
 
 /*  NAVEGACION DE LA PAGINA ----------------------------------------------------------------------------------------------*/
@@ -131,7 +137,9 @@ header a:hover img {
   cursor: pointer;
 }
 
-.main-navigation>.nav-link, .btns-container>.nav-link, .dropdown>.nav-link {
+.main-navigation>.nav-link,
+.btns-container>.nav-link,
+.dropdown>.nav-link {
   font-size: 1rem;
   line-height: 1rem;
   max-height: 4.0625rem;
@@ -149,7 +157,8 @@ header a:hover img {
   border-left: none;
 }
 
-.dropdown-content .c-link.active, #mng.dropdown-nav-links .c-link.active {
+.dropdown-content .c-link.active,
+#mng.dropdown-nav-links .c-link.active {
   border-left: 4px solid #dfaf1d !important;
   border-bottom: none;
 }
@@ -793,9 +802,11 @@ main {
   25% {
     background-image: url("../images/biblioteca.jpg")
   }
+
   50% {
     background-image: url("../images/aula.jpg")
   }
+
   75% {
     background-image: url("../images/gabinete.jpg")
   }
@@ -866,9 +877,11 @@ main {
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(360deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -895,7 +908,8 @@ main {
   border: 2px #dfaf1d solid;
 }
 
-.img-vision, .img-vision:before {
+.img-vision,
+.img-vision:before {
   background-size: 50% 50% / cover;
 }
 
@@ -945,7 +959,8 @@ main {
 
 /* FORMULARIO ------------------------------POSIBLE BORRON--------------------------------------------------*/
 
-.overlay-right-form h1, .overlay-left-form h1 {
+.overlay-right-form h1,
+.overlay-left-form h1 {
   font-weight: bold;
   margin: 0;
 }
@@ -954,7 +969,8 @@ main {
   margin: 15px 0;
 }
 
-.overlay-right-form p, .overlay-left-form p {
+.overlay-right-form p,
+.overlay-left-form p {
   font-size: 14px;
   font-weight: 100;
   line-height: 20px;
@@ -969,7 +985,8 @@ main {
   margin: 15px 0;
 }
 
-.btn-form, .btn1-form {
+.btn-form,
+.btn1-form {
   border-radius: 20px;
   border: 1px solid #1044a7;
   background-color: #1044a7;
@@ -984,7 +1001,8 @@ main {
   transition: all 0.3s ease-in-out;
 }
 
-.btn-form:hover, .btn1-form:hover {
+.btn-form:hover,
+.btn1-form:hover {
   transform: scale(1.05);
 }
 
@@ -1069,11 +1087,15 @@ button.ghost-form {
 }
 
 @keyframes show {
-  0%, 49.99% {
+
+  0%,
+  49.99% {
     opacity: 0;
     z-index: 1;
   }
-  50%, 100% {
+
+  50%,
+  100% {
     opacity: 1;
     z-index: 5;
   }
@@ -1322,12 +1344,14 @@ button.ghost-form {
   border-radius: 50px;
 }
 
-.list-dept:hover:before, .cards-equipo:hover:before {
+.list-dept:hover:before,
+.cards-equipo:hover:before {
   width: 100%;
   color: white;
 }
 
-.cards-equipo:hover h3, .cards-equipo:hover i {
+.cards-equipo:hover h3,
+.cards-equipo:hover i {
   color: white;
 }
 
@@ -1441,7 +1465,9 @@ button.ghost-form {
   height: 100%;
 }
 
-h3.p-title, h2.p-title, h1.p-title {
+h3.p-title,
+h2.p-title,
+h1.p-title {
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
   padding: 2rem 1rem;
@@ -2054,7 +2080,8 @@ span.date::before {
   overflow-y: scroll;
 }
 
-.project-grouplist .project, #project-list .project {
+.project-grouplist .project,
+#project-list .project {
   border: 1px solid #d1d1d1;
   margin-bottom: 5px;
   cursor: pointer;
@@ -2500,15 +2527,18 @@ button#remove-group {
     width: 100%;
     margin: 0 20px;
   }
+
   .left-galeria {
     width: 100%;
     height: 400px;
   }
+
   .right-galeria {
     width: 90%;
     margin: 0;
     margin-top: -100px;
   }
+
   .segunda-fila-galeria {
     padding-top: 200px;
   }
@@ -2518,9 +2548,11 @@ button#remove-group {
   .left-galeria {
     width: 60%;
   }
+
   .right-galeria {
     width: 45%;
   }
+
   .segunda-fila-galeria {
     margin-top: -250px !important;
   }
@@ -2560,14 +2592,16 @@ button#remove-group {
 
 .div2-cartas {
   grid-area: 1 / 4 / 3 / 6;
-  background-color: #9acef8;
+  background-color: #161616;
+  color: #fff;
   height: 320px;
   margin-top: 15px;
 }
 
 .div3-cartas {
   grid-area: 3 / 1 / 5 / 3;
-  background-color: #77acd2;
+  background-color: #161616;
+  color: #fff;
   height: 320px;
   margin-top: 15px;
 }
