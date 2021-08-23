@@ -9,7 +9,6 @@ function basicPageTransition(){
 
   const tl =  gsap.timeline();
 
-
   tl.to('ul.rows-c li', {duration:.7, scaleX: 1, transformOrigin: "bottom left", stagger: .2});
   tl.to('.page-transition img', {opacity: 1, rotate: 0, x: "-50%", y: "-50%"}, "-=.5")
   tl.to('body', {position: 'fixed'})

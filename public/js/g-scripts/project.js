@@ -1,12 +1,12 @@
-$(function(){
-  $('body').on('submit', '#create-group', function(e){
+$(function () {
+  $('body').on('submit', '#create-group', function (e) {
     e.preventDefault();
 
     let group = $('form#create-group input[name="title"]');
     let groupTitle = group.val();
 
     let request = new XMLHttpRequest();
-    request.onreadystatechange = function(){
+    request.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
 
         group.val('');
@@ -36,7 +36,7 @@ $(function(){
   });
 
 
-  $('body').on('click', '#remove-group', function(e){
+  $('body').on('click', '#remove-group', function (e) {
 
     let group = $('.project.selected');
 
@@ -45,7 +45,7 @@ $(function(){
     $.ajax({
       url: `/users/gestion/proyectos/grupo/${groupId}`,
       method: "DELETE",
-      success: function(){
+      success: function () {
         group.remove();
         $('.messages').children().remove();
 
@@ -63,33 +63,33 @@ $(function(){
 
   });
 
-  $('body').on('click', 'button.edit', function(){
+  $('body').on('click', 'button.edit', function () {
     let $el = $(this).siblings('span');
 
-    let $input = $('<input/>').val( $el.text() );
-    $el.replaceWith( $input );
+    let $input = $('<input/>').val($el.text());
+    $el.replaceWith($input);
 
-    let save = function(){
+    let save = function () {
 
-      let $span = $('<span class="f-el" data-editable />').text( $input.val() );
+      let $span = $('<span class="f-el" data-editable />').text($input.val());
 
       let group = $(this).parents('.project');
       let groupId = group.attr("id");
 
       let title = $(this).val();
 
-      if(title == '') return;
+      if (title == '') return;
 
       $.ajax({
         url: `/users/gestion/proyectos/grupo/${groupId}`,
         method: "PUT",
-        data:{
+        data: {
           groupTitle: title
         },
-        success: function(){
-          $input.replaceWith( $span );
+        success: function () {
+          $input.replaceWith($span);
           $input.off('blur');
-          if(group.hasClass('has-info-open')){
+          if (group.hasClass('has-info-open')) {
             $.ajax({
               url: `/users/gestion/proyectos/grupo/${groupId}`,
               method: "GET",
@@ -105,7 +105,7 @@ $(function(){
 
   });
 
-  $('body').on('click', '.project-grouplist .project span.f-el', function(){
+  $('body').on('click', '.project-grouplist .project span.f-el', function () {
     $('.project-grouplist .project').removeClass('selected has-info-open')
     let group = $(this).parents('.project');
     group.addClass('selected has-info-open');
@@ -120,7 +120,7 @@ $(function(){
 
   });
 
-  $('body').on('submit', '#add-project', function(e){
+  $('body').on('submit', '#add-project', function (e) {
     e.preventDefault();
 
     let newProjectInput = $('#add-project input[name="p-title"]')
@@ -140,7 +140,7 @@ $(function(){
 
   });
 
-  $('body').on('click', '#remove-project', function(){
+  $('body').on('click', '#remove-project', function () {
     let project = $(this).parents('.project');
     let group = $('.project.selected');
 
@@ -155,11 +155,11 @@ $(function(){
 
   });
 
-  function updateProjectInfo(data){
+  function updateProjectInfo(data) {
     console.log(data);
 
-    let {groupTitle, date, associatedProjects} = data.group;
-    let {projectsHtml} = data;
+    let { groupTitle, date, associatedProjects } = data.group;
+    let { projectsHtml } = data;
 
 
     formattedDate = new Date(date);
@@ -195,5 +195,109 @@ $(function(){
   //       }
   //     }
   //   });
+
+  // Handler for create news
+  $('body').on('submit', '#add-news', function (e) {
+
+    // Prevent redirect by form
+    e.preventDefault();
+
+    var title = $('#title').val();
+    var body = $('#body').val();
+    var extract = $('#extract').val();
+
+    // Send async
+    $.ajax({
+      url: `/users/gestion/news`,
+      method: "POST",
+      data: { title, body, extract },
+      success: function (data, textStatus, xhr) {
+        window.location.href = "/users/gestion/news";
+      },
+      error: (data, textStatus, xhr) => {
+
+        // Get res body
+        var response = data.responseJSON
+
+        var messageContainer = document.querySelector(".messages");
+
+        // Show errors
+        if (response.errors) {
+          response.errors.forEach(
+            element => {
+              messageContainer.appendChild(document.createTextNode(element.text))
+            }
+          )
+        }
+      }
+    });
+  })
+
+  // Handler for edit news
+  $('body').on('submit', '#edit-news', function (e) {
+
+    // Prevent redirect by form
+    e.preventDefault();
+
+    var id = $('#newsId').val();
+    var title = $('#title').val();
+    var body = $('#body').val();
+    var extract = $('#extract').val();
+    var urlEdit = "/users/gestion/news/edit";
+
+
+    const options = {
+      method: "PUT",
+      body: new URLSearchParams({ id, title, body, extract })
+    };
+
+
+    fetch(urlEdit, options)
+      .then(res => {
+        if (res.ok) {
+          alert("Success")
+        } else {
+          return res.json()
+          console.log(res)
+          // 
+        }
+      })
+      .then(data => {
+        // Show errors
+        if (data.hasOwnProperty('errors')) {
+          var messageContainer = document.querySelector(".messages");
+          data.errors.forEach(
+            element => {
+              messageContainer.appendChild(document.createTextNode(element.text))
+            }
+          )
+        }
+      })
+
+  })
+
+  $('body').on('click', '.delete-new', function (e) {
+    var userConfirm = confirm("¿Está seguro que desea eliminar permanentemente esta noticia?")
+
+    if (userConfirm) {
+
+      var id = e.target.getAttribute('data-id');
+
+      // Send async
+      $.ajax({
+        url: `/users/gestion/news/` + id,
+        method: "DELETE",
+        data: { id },
+        success: function (data, textStatus, xhr) {
+          e.target.parentElement.remove();
+        },
+        error: (data, textStatus, xhr) => {
+          alert("Error")
+          console.log(data)
+        }
+      });
+    }
+
+  })
 
 });

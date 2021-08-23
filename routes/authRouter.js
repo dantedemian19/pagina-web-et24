@@ -62,6 +62,7 @@ router.delete('/logout', (req, res) => {
 
 router.use('/gestion', checkAuthenticated, checkPermissions);
 router.use('/gestion/mensajes', require('./management/msgMngRouter'));
+router.use('/gestion/news', require('./management/news'));
 router.use('/gestion/usuarios',  require('./management/userMngRouter'));
 router.use('/gestion/proyectos', require('./management/prjsMngRouter'));
 
@@ -93,6 +94,5 @@ function checkPermissions(req, res, next) {
   }
   res.redirect('/');
 }
-
 
 module.exports = router;

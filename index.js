@@ -2,14 +2,15 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').config()
 }
 //importa las paquetes necesarios
-const express = require('express'); // manejo de rutas
-const mongoose = require('mongoose'); // conexion con la BD
-const methodOverride = require('method-override'); // enviar peticiones distintas de GET y POST
-const bcrypt = require('bcrypt'); // encriptar (contraseñas)
-const cookieParser = require('cookie-parser'); // analiza las cookies
-const session = require('express-session'); // guarda la sesion
-const flash = require('express-flash') // enviar mensajes en redirects
-const passport = require('passport'); // autenticacion de sesion
+const express          = require('express'); // manejo de rutas
+const mongoose         = require('mongoose'); // conexion con la BD
+const methodOverride   = require('method-override'); // enviar peticiones distintas de GET y POST
+const bcrypt           = require('bcrypt'); // encriptar (contraseñas)
+const cookieParser     = require('cookie-parser'); // analiza las cookies
+const session          = require('express-session'); // guarda la sesion
+const flash            = require('express-flash') // enviar mensajes en redirects
+const passport         = require('passport'); // autenticacion de sesion
+const morgan           = require('morgan');
 const addLocalStrategy = require('./localPassport-config') // estrategia de autenticacion
 
 const app = express();
@@ -28,6 +29,9 @@ app.set('view engine', 'jade');
 // sirve la carpeta public con los archivos publicos
 app.use('/public', express.static('public'));
 
+// Debug del back
+app.use(morgan("dev"));
+
 // premite extraer los datos del cuerpo de las solicitudes
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
@@ -36,7 +40,7 @@ app.use(cookieParser(process.env.SECRET));
 app.use(session({
   secret: process.env.SECRET,
   resave: true,
-  saveUninitialiazed: true
+  saveUninitialized: true
 }));
 app.use(flash());
 
@@ -64,13 +68,13 @@ app.use('/institucional', require('./routes/institucionalRouter'));
 //monta el router con  el direccionamiento para las rutas de sesion
 app.use('/users', require('./routes/authRouter'))
 app.use('/messages', require('./routes/messagesRouter'));
+app.use('/news', require('./routes/news'));
 
 
 // Direccionamiento basico
 app.get('/',(req, res) => {
   res.render('inicio');
 });
-
 
 //404 not found page
 app.use((req, res, next) => {

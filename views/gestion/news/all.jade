@@ -1,0 +1,21 @@
+extends ../../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="news")
+    #mng-op.container-content.g-cont
+      .cards-container.esp-layout
+        .container-content.ttl-width
+          h1.p-title Todas las noticias
+          .inner
+            .cards-container.esp-layout
+              .container-content.md-width
+                h3.p-title Noticias
+                a(href="/users/gestion/news/create") Crear nueva noticia
+                each project in allNews
+                  div
+                    h3=project.title
+                    span=project.extract
+                    br
+                    a(href="/users/gestion/news/edit/#{project.id}") #[i.fas.fa-pencil-alt]
+                    button.delete-new(type="button" name="title" data-id="#{project.id}" ) Delete
+                  br
+        include ../../partials/gestionNavigation.jade

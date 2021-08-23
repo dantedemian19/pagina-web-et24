@@ -1,0 +1,25 @@
+extends ../../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="news")
+    #mng-op.container-content.g-cont
+      .cards-container.esp-layout
+        .container-content.ttl-width
+          h1.p-title Noticias
+          .inner
+            .cards-container.esp-layout
+              .container-content.md-width
+                form#add-news
+                    h3.p-title Agregar noticias
+                    .project
+                        p Titulo :
+                        .input-row
+                          input.f-el(type="text" name="title" id="title" required)
+                        p Cuerpo: 
+                        .input-row 
+                          textarea(name="body" id="body" rows="10" required)
+                        p Extracto: 
+                        .input-row 
+                          textarea(name="body" id="extract" rows="10")
+                        button.btn(type="submit") Enviar
+                .messages
+        include ../../partials/gestionNavigation.jade
