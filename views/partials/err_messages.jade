@@ -1,0 +1,16 @@
+if (typeof err_messages != 'undefined')
+  for error in err_messages.err_info
+    .msg.err_c
+      p.msg-d #{error}
+      .close-msg
+        i.fas.fa-times
+if (messages.success_msg)
+  .msg.scss_c
+    p.msg-d #{messages.success_msg}
+    .close-msg
+      i.fas.fa-times
+if (messages.error)
+  .msg.err_c
+    p.msg-d #{messages.error}
+    .close-msg
+      i.fas.fa-times

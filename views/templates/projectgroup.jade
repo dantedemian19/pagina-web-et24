@@ -1,0 +1,6 @@
+.project(id="#{project._id}")
+  //- span #{project.date.getDate()}/#{project.date.getUTCMonth()+ 1}/#{project.date.getFullYear()}
+  .inline-query-c
+    span.f-el #{project.groupTitle}
+    button.s-el.edit(type="button") #[i.far.fa-edit]
+  //- button#remove-group(type="button") Eliminar

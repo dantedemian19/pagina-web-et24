@@ -1,0 +1,65 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, user-scalable=no")
+    title Error 404
+    style(type="text/css").
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Montserrat", sans-serif;
+      }
+      .error-c{
+        max-width: 650px;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+      }
+      .error-c img{
+        width: 100%;
+      }
+      .error-c h1{
+        font-size: 4rem;
+      }
+      .error-c p{
+        padding: 1rem 0;
+      }
+      
+      @media screen and (max-width: 540px){
+        .error-c h1{
+          font-size: 2.5rem;
+        }
+      }
+      .vuelta-inicio {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.625rem 3rem;
+        background-color: #dfaf1d;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 25px;
+        text-transform: uppercase;
+        transition: all 0.25s ease-in-out;
+      }
+      .vuelta-inicio:hover {
+        transform: translateY(-5px) scale(1.08);
+        box-shadow: 0px 10px 10px -6px black;
+      }
+  body
+    .error-c
+      img(src="/../public/svg/notfound.svg", alt="No se encontró")
+      h1 No se econtró
+      p Lo sentimos, pero la pagina que esta buscando no existe.
+      a.vuelta-inicio(href="/") Ir al Inicio

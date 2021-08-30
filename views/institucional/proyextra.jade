@@ -1,0 +1,105 @@
+extends ../layout.jade
+block contenido
+  link(rel='stylesheet' href='../public/css/all.min.css')
+  body
+    main(data-barba='container' data-barba-namespace='proyextra')
+      .title-bi
+        h1 Proyectos Extracurriculares
+      section.section-galeria
+        .container-galeria
+          .left-galeria.imagen1-galeria
+          .right-galeria
+            .content-galeria
+              h1(style='font-size: 35px;') Modelo ONU
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='./proyextra/onu') Leer más
+        .container-galeria
+          .left-galeria.imagen2-galeria
+          .right-galeria
+            .content-galeria
+              h1 TedEd
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='./proyextra/ted') Leer más
+      section.segunda-fila-galeria.section-galeria
+        .container-galeria
+          .left-galeria.imagen3-galeria
+          .right-galeria
+            .content-galeria
+              h1 Radio ET24
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='./proyextra/radio') Leer más
+        .container-galeria
+          .left-galeria.imagen4-galeria
+          .right-galeria
+            .content-galeria
+              h1(style='font-size: 34px;') Mi factura PF
+              p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, minima.
+              a.btn-galeria(href='./proyextra/miFactura') Leer más
+
+      footer.footer
+        .container-footer
+          .row-footer
+            .footer-col
+              .primera
+                h4.etn24 E.T.N°24 D.E.17
+                .descripcion
+                  a()
+                    | Más de 70 años guiando a las futuras generaciones, buscando crear mejores personas y asegurando su futuro.
+            .footer-col
+              .columna1
+                h4 Programadores
+                ul.ul-footer
+                  li
+                    a() Gimenéz Lucas Matias
+                  li
+                    a() Alfonso Dante
+                  li
+                    a() Lucas González
+                  li
+                    a() Denis Luna
+                  li
+                    a() Lucas De La Pina
+            .footer-col
+              .columna2
+                h4 Diseñadores
+                ul.ul-footer
+                  li
+                    a() Sanchéz Germán
+                  li
+                    a() García Matias
+                  li
+                    a() Victor Paredes
+                  // <li><a href="#"></a></li>
+            .footer-col
+              .columna3
+                h4 Líderes y Documentadores
+                ul.ul-footer
+                  li
+                    a() Santiago Betancort
+                  li
+                    a() Thiago Montenegro
+                  li
+                    a() Victor Paredes
+                  // <li><a href="#"></a></li>
+            .footer-col.footer-redes
+              .columna-redes
+                h4 Redes
+                .social-links
+                  ul.ul-footer
+                    li
+                      a.facebook(href='https://www.facebook.com/ET-Nº-24-84991834162')
+                        i.fab.fa-facebook-f
+                    li
+                      a.gmail(href='mailto:et24-defbsas@gmail.com')
+                        i.fab.fa-google-plus-g
+                    li
+                      a.ig(href="https://www.instagram.com/proyectoset24/")
+                        i.fab.fa-instagram
+                    li
+                      a.discord(href="https://discord.gg/xASe67r")
+                        i.fab.fa-discord
+      .inferior
+        p.derechos
+          | 2021 Copyright © Derechos reservados Escuela Técnica N°24 D.E.17 "Defensa de Buenos Aires"
+
+    script(src='../../public/js/galeria.js')

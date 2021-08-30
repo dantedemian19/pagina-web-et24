@@ -1,0 +1,233 @@
+extends ./layout.jade
+//- block preload
+//-   include ./partials/preload.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="inicio")
+    .block-slider
+      .slider-img
+      .slider-content.row
+        img(src="../public/images/logo1.png", alt="Logo")
+        h1 
+          span E.T. 24 D.E. 17
+        h2 
+          span Defensa de Buenos Aires
+      .showmore-btn
+        a(href="#comienzo") #[i.fas.fa-chevron-down] 
+    .block(id="comienzo")
+      .content-desc.row
+        h1.p-title ¿Qué caminos ofrecemos?
+        p En la Escuela Técnica 24, les ofrecemos a los/as alumnos/as la posibilidad de elegir su tecnicatura a cursar a partir del 3° año, ya habiendo transitado el Primer Ciclo, que les brindará una introducción a cada especialidad y los/as ayudará a decidir de que manera desean continuar el desarrollo de su educación.
+        p Estos son los dos caminos que todo alumno/a podrá tomar:
+      #caminos-box.cards-container.center-items
+        .obj-box
+          .slider-content
+            h1 T.I.P.P.P
+          img(src="./public/svg/programador2.svg", alt="aula de computacion")
+          .obj-tit
+            i(class="fas fa-angle-up")
+            h1 Técnico en Informática profesional y personal en Programación
+            p Con esta especialidad, el/la alumno/a se adentrara en el mundo del mañana, el mundo de la tecnología. Aprendiendo desde lo más básico (pseudolenguajes de programación, manejo de variables, condicionales básicos, entre otros) hasta lo más profesional (programación orientada a objetos, robotica, análisis de sistemas, entre otros).
+            a.c-btn(href="/institucional/especialidades/computacion" class="boton-objetivos") Ver más
+        .obj-box
+          .slider-content
+            h1 T.G.A.O
+          img(src="./public/svg/ad.svg", alt="aula de administración de empresas")
+          .obj-tit
+            i(class="fas fa-angle-up")
+            h1 Técnico en Gestión y Administración de las Organizaciones
+            p La administración de empresas es la disciplina de gestión eficiente y dinámica de los recursos de una institución empresarial para lograr y mantener la sostenibilidad de su crecimiento. Es una disciplina transversal que prepara a sus estudiantes para el manejo y compresión de las situaciones administrativas, financieras, económicas y laborales.
+            a.c-btn(href="/institucional/especialidades/ade" class="boton-objetivos") Ver más
+    .block.img-vision
+      .content-desc.row
+        h1#tit-vis.p-title ¿Cuál es nuestra visión?
+        p Durante 73 años, buscamos no solo enseñar los valores que toda persona debe tener, tales como responsabilidad, generosidad, compromiso, honestidad, entre otros, sino que también nos enfocamos en preparar de la mejor manera a los alumnos y las alumnas, nuestro futuro. Queremos que cuando el/la estudiante finalice su camino por la E.T. 24 haya aprendido todo lo necesario para enfrentar el mundo del mañana y encaminarse a las nuevas etapas que se aproximan en su vida.
+    .block
+      .content-desc.row
+        h1.p-title ¿Cuáles son nuestros objetivos?
+        p Como escuela queremos conseguir que cada uno/a de los/as estudiantes que pase por nuestra institución, no solo egrese con nuevos saberes adquiridos y preparado/a para encarar su carrera laboral, sino que también listo/a para tener una inserción correcta en la sociedad y con las herramientas para defender sus derechos dentro de ella.
+        p Estos son los principales saberes que queremos desarrollar en nuestros alumnos y nuestras alumnas:
+      .cards-container.center-items
+        .obj-box
+          img(src="./public/images/estudiantes.jpg", alt="Estudiantes")
+          .obj-tit
+            i(class="fas fa-angle-up")
+            h1 Fomentar el servicio a la comunidad
+            p Formamos para que los alumnos y alumnas pongan sus talentos al servicio de la comunidad, animando a la comunicación y participación, a la colaboración y a la solidaridad. Consideramos que es importante que el/la individuo pueda compartir sus saberes para contribuir y dejarle un legado o una enseñanza a sus pares. Así es como nacen las grandes ideas y se forman los grandes proyectos.
+          .shadow
+        .obj-box
+          img(src="./public/images/machismo.jpg", alt="Abolición al machismo")#zoom
+          .obj-tit
+            i(class="fas fa-angle-up")
+            h1 Desarrollar conciencia crítica
+            p Preparamos a nuestros alumnos y alumnas para que desarrollen una conciencia crítica frente a las situaciones que ponen en riesgo los derechos y las condiciones de vida de sus semejantes. De esta manera, su posicionamiento y sus primeras interacciones con el mundo real (fuera de la escuela) no serán del todo frustrantes para el/la joven y podrá desarrollarse satisfactoriamente.
+          .shadow
+        .obj-box
+          img(src="./public/images/bandera.png", alt="Bandera Argentina")
+          .obj-tit
+            i(class="fas fa-angle-up")
+            h1 Promover el amor por la patria y la libertad
+            p Fomentamos el amor a la patria, el sentido de libertad para la democracia y la responsabilidad social. Buscamos formar en los/as alumnos/as un sentido ético y moral que los/as lleve a ser mejores ciudadanos/as, celebrando las fechas patrias, enseñando los símbolos patrios y promoviendo el amor por nuestros próceres, así como también enseñando la historia política de nuestra nación.
+          .shadow
+    .block
+      .content-desc.row
+        h1.p-title ¿Qué valores comparte nuestra institución?
+        p Consideramos que tanto el equipo docente, como los/as alumnos/as, deben compartir una serie de valores para convivir en un ámbiente donde puedan sentirse seguros/as y en paz. Sin lugar a dudas, el transitar de la educación se vuelve mucho mas ameno y efectivo cuando estos se cumplen. 
+        p Estos son los valores que fomentamos y con los que formaremos a los/as estudiantes:
+      .cards-container.center-items
+        .val-box
+          .obj.box
+            .val-tit
+              h1 Compromiso Social
+            i(class="fas fa-comment iconos-valores")
+        .val-box
+          .obj.box
+            .val-tit
+              h1 Compañerismo
+            i(class="fas fa-users iconos-valores")
+        .val-box
+          .obj.box
+            .val-tit
+              h1 Respeto
+            i(class="fas fa-handshake iconos-valores")
+        .val-box
+          .obj.box
+            .val-tit
+              h1 Solidaridad
+            i(class="fas fa-people-carry iconos-valores")
+    footer.footer
+      .container-footer
+        .row-footer
+          .footer-col
+            .primera
+              h4.etn24 E.T.N°24 D.E.17
+              .descripcion
+                a()
+                  | Más de 70 años guiando a las futuras generaciones, buscando crear mejores personas y asegurando su futuro.
+          .footer-col
+            .columna1
+              h4 Programadores
+              ul.ul-footer
+                li
+                  a() Gimenéz Lucas Matias
+                li
+                  a() Alfonso Dante
+                li
+                  a() Lucas González
+                li
+                  a() Denis Luna
+                li
+                  a() Lucas De La Pina
+          .footer-col
+            .columna2
+              h4 Diseñadores
+              ul.ul-footer
+                li
+                  a() Sanchéz Germán
+                li
+                  a() García Matias
+                li
+                  a() Victor Paredes
+                // <li><a href="#"></a></li>
+          .footer-col
+            .columna3
+              h4 Líderes y Documentadores
+              ul.ul-footer
+                li
+                  a() Santiago Betancort
+                li
+                  a() Thiago Montenegro
+                li
+                  a() Victor Paredes
+                // <li><a href="#"></a></li>
+          .footer-col.footer-redes
+            .columna-redes
+              h4 Redes
+              .social-links
+                ul.ul-footer
+                  li
+                    a.facebook(href='https://www.facebook.com/ET-Nº-24-84991834162')
+                      i.fab.fa-facebook-f
+                  li
+                    a.gmail(href='mailto:et24-defbsas@gmail.com')
+                      i.fab.fa-google-plus-g
+                  li
+                    a.ig(href="https://www.instagram.com/proyectoset24/")
+                      i.fab.fa-instagram
+                  li
+                    a.discord(href="https://discord.gg/xASe67r")
+                      i.fab.fa-discord
+    .inferior
+      p.derechos
+        | 2021 Copyright © Derechos reservados Escuela Técnica N°24 D.E.17 "Defensa de Buenos Aires"
+
+    //- .footer
+    //-   .slogan
+    //-     h1 E.T. N° 24...
+    //-     h1 Más de 70 años guiando a las futuras generaciones
+    //-   .cards-container.foot.margin0
+    //-     .cards-footer
+    //-       h1 CONTÁCTANOS
+    //-       .sm-links.foot-links
+    //-         .sm-limk
+    //-           a(href="javascript:void(0)") #[i.fas.fa-phone-alt] +54 11 4055-2245
+    //-         .sm-limk
+    //-           a(href="mailto:et24-defbsas@gmail.com") #[i.far.fa-envelope-open] et24-defbsas@gmail.com
+    //-     .cards-footer
+    //-       h1 REDES SOCIALES
+    //-       .sm-links.foot-links
+    //-         .sm-limk
+    //-           a(href="https://instagram.com/periodico.escolar.et24?igshid=1ecfs4bgj1twm" target="_blank") #[i.fab.fa-instagram] Periódico Escolar ET N°24
+    //-         .sm-limk
+    //-           a(href="https://www.facebook.com/Peri%C3%B3dico-Escolar-ET-N%C2%BA-24-1607076049519806/" target="_blank") #[i.fab.fa-facebook-f] Periódico Escolar ET N°24
+    //-     .cards-footer.equipo-des
+    //-       h1 EQUIPO DE DESARROLLO
+    //-       .cards-container.margin0
+    //-         .dept.ancho
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/SantiagoFondo.png", alt="Lucas De La Pina")
+    //-               p Santiago Betancort | Lider
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Lider
+    //-         .dept.ancho 
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/DenisFondo.png", alt="Lucas De La Pina")
+    //-               p Denis Luna | Programador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
+    //-         .dept.ancho  
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/LukiluFondo.png", alt="Lucas De La Pina")
+    //-               p Lucas González | Programador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/TituFondo.png", alt="Lucas De La Pina")
+    //-               p Lucas De La Pina | Programador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Programador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/ThiagoFondo.png", alt="Lucas De La Pina")
+    //-               p Thiago Montenegro | Documentador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Documentador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/VictorFondo.png", alt="Lucas De La Pina")
+    //-               p Victor Paredes | Documentador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Documentador
+    //-         .dept.ancho    
+    //-           .list-dept.desarrolladores
+    //-             .list-dept-cont.desarrollador
+    //-               .img-desarrollador
+    //-                 img(src="../public/images/NasanteFondo.png", alt="Lucas De La Pina")
+    //-               p Nahuel Serruya | Diseñador
+    //-               //- span(style="color: #E0B80E; font-size: 18px; padding: 5px 0 5px 0;") Diseñador

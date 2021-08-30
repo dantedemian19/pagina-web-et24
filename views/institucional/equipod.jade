@@ -1,0 +1,231 @@
+extends ../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="equipod")
+    //- .header-container
+    //-   .header-box.header-title
+    //-     .box-desc
+    //-       h1 Equipo docente
+    //-       button.shw-btn Ver Más #[i.fas.fa-chevron-down]
+    //-   .header-box.header-img-c
+    //- .container
+    //-   .container-content
+    //-     h2 Equipo de Conducción
+    //-     ul
+    //-       li Rector:                                Lic. Diego L. Bibian
+    //-       li Vice-Rectora:                          Prof. Silvia Albarellos
+    //-       li Regente de Cultura General:          	Prof. Eduardo Zanetic
+    //-       li Regente de Cultura Técnica:          	Prof. Liliana Díaz
+    //-       li Regente de Cultura Técnica:          	Prof. Gladys V. Prada
+    //-       li Secretaria:                            Sra. Diana del Carmen Vallejos
+    //-       li Pro-Secretaria:                        Srta. Agueda Di Gregorio
+    //-       li Pro-Secretaria:                        Srta. Mónica G. Meza
+    //-       li Pro-Secretaria:                       	Sra.  Patricia Moldavsky
+    //-       il Jefa de Preceptores en el T.T.:       	Sra. Jimena González
+    //-       li Sub-Jefa de Preceptores en el T.M:   	Sra. Valeria Mariani
+    //-       li Sub-Jefe de Preceptores en el T.N:     Sr. Lionel F. Puterman
+    //-       li Asesora Pedagógica                   	Prof. Rosana Garretto
+    //-     h2 Departamentos Docentes
+    //-     h3 Coordinación del Ciclo Superior de Administración de Empresas
+    //-     ul
+    //-       li Coordinador:                                      	Prof. Vanesa Trombetta
+    //-       li Colaborador:                                      	Prof. Maximiliano Carreras
+    //-     h3 Coordinación del Ciclo Superior de Computación
+    //-     ul
+    //-       li Coordinadora:                                      Prof. Carlos O. Mombrú
+    //-       li Colaborador:                                     	Prof. Alejandra M. Rivero
+    //-     h3 Coordinación del Bachillerato Internacional
+    //-     ul
+    //-       li Coordinador:                                      	Prof. Marcelo Saporito
+    //-     h3 Área de Expresión y Comunicación
+    //-     ul
+    //-       li Coordinadora:                                   	Prof. Román Palavecino
+    //-       li Colaboradora:                                   	Prof. Claudia A. Burgos
+    //-     h3 Área de Ciencias Exactas y Naturales
+    //-     ul
+    //-       li Coordinadora:                      	             Prof. Carina Sinisi
+    //-       li Colaborador:                                      Prof. Lilian Ciriza
+    //-     h3 Área de Ciencias Sociales
+    //-     ul
+    //-       li Coordinador:                                    	Prof. Flavio Scarpa
+    //-       li Colaboradora:                                  	Prof. Colatruglio Liliana
+    //-     h3 Área Tecnológico
+    //-     ul
+    //-       li Coordinador:                                    	Prof. Giselle Cespedes
+    //-       li Colaboradora:                                  	Prof. Claudia Kamin
+    //-     h3 Tutorías
+    //-     ul
+    //-       li Coordinador Turno Mañana:                        Prof. Claudio Llenolio
+    //-       li Coordinadora Turno Tarde:                        Prof. Alicia Gil
+    //-       li Coordinadora Turno Noche:                        Prof.. Minué Fabiana
+    //-     h3 Prácticas Profesionalizantes 
+    //-     ul
+    //-       li Referente:           	Prof. Carina Sini
+    .title-bi
+      h1 Nuestro Equipo Docente
+    .container-content.ttl-width
+      .equipo-d
+        h2 Equipo de Conducción
+        hr
+        .cards-container
+          .cards-equipo
+            .cards-equipo-cont
+              h3 RECTOR
+              .docente
+                i(class="fas fa-user-tie")
+                p Diego L. Bibian
+          .cards-equipo
+            .cards-equipo-cont
+              h3 VICE-RECTORA
+              .docente
+                i(class="fas fa-user-tie")
+                p Silvia Albarellos
+          .cards-equipo
+            .cards-equipo-cont
+              h3 REGENTE DE CULTURA GENERAL
+              .docente
+                i(class="fas fa-user-tie")
+                p Eduardo Zanetic
+
+          .cards-equipo
+            .cards-equipo-cont
+              h3 REGENTE DE CULTURA TÉCNICA
+              .docente
+                i(class="fas fa-user-tie")
+                p Liliana Díaz
+              .docente
+                i(class="fas fa-user-tie")
+                p Gladys V. Prada
+          .cards-equipo
+            .cards-equipo-cont
+              h3 SECRETARIA
+              .docente
+                i(class="fas fa-user-tie")
+                p Diana del C. Vallejos
+          .cards-equipo
+            .cards-equipo-cont
+              h3 PRO-SECRETARIA
+              .docente
+                i(class="fas fa-user-tie")
+                p Agueda Di Gregorio
+              .docente
+                i(class="fas fa-user-tie")
+                p Mónica G. Meza
+              .docente
+                i(class="fas fa-user-tie")
+                p Patricia Moldavsky
+          
+          .cards-equipo
+            .cards-equipo-cont
+              h3 JEFA DE PRECEPTORAS
+              .docente
+                i(class="fas fa-user-tie")
+                p Jimena González (T.T.)
+          .cards-equipo
+            .cards-equipo-cont
+              h3 SUB-JEFE DE PRECEPTORES
+              .docente
+                i(class="fas fa-user-tie")
+                p Lionel F. Puterman (T.N.)
+              .docente
+                i(class="fas fa-user-tie")
+                p Valeria Mariani (T.M.)
+          .cards-equipo
+            .cards-equipo-cont
+              h3 ASESORA PEDAGÓGICA
+              .docente
+                i(class="fas fa-user-tie")
+                p Rosana Garretto
+      .equipo-d
+        h2 Departamentos Docentes
+        hr
+        .cards-container
+          .dept
+            h3 Coordinación del Ciclo Superior de Administración y Gestión de las Organizaciones
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinadora
+                p Vanesa Trombetta
+            .list-dept
+              .list-dept-cont
+                p#blue Colaborador
+                p Maximiliano Carreras
+          .dept
+            h3 Coordinación del Ciclo Superior de Informática profesional y personal en Programación
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinador
+                p Carlos O. Mombrú
+            .list-dept
+              .list-dept-cont
+                p#blue Colaboradora
+                p Alejandra M. Rivero
+        .cards-container
+          .dept
+            h3 Área de Expresión y Comunicación
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinador
+                p Román Palavecino
+            .list-dept
+              .list-dept-cont
+                p#blue Colaboradora
+                p Claudia A. Burgos
+          .dept
+            h3 Área de Ciencias Exactas y Naturales
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinadora
+                p Carina Sinisi
+            .list-dept
+              .list-dept-cont
+                p#blue Colaboradora
+                p Lilian Ciriza
+        .cards-container
+          .dept
+            h3 Área de Ciencias Sociales
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinador
+                p Flavio Scarpa
+            .list-dept
+              .list-dept-cont
+                p#blue Colaboradora
+                p Liliana Colatruglio
+          .dept
+            h3 Área Tecnológica
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinadora
+                p Giselle Cespedes
+            .list-dept
+              .list-dept-cont
+                p#blue Colaboradora
+                p Claudia Kamin
+        .cards-container
+          .dept
+            h3 Coordinación del Bachillerato Internacional
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinador
+                p Marcelo Saporito
+          .dept
+            h3 Prácticas Profesionalizantes
+            .list-dept
+              .list-dept-cont
+                p#blue Referente
+                p Carina Sinisi
+        .cards-container
+          .dept
+            h3 Tutorías
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinador (Turno Mañana)
+                p Claudio Llenolio
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinadora (Turno Tarde)
+                p Alicia Gil
+            .list-dept
+              .list-dept-cont
+                p#blue Coordinadora (Turno Noche)
+                p Minué Fabiana

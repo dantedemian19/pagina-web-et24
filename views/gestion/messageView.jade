@@ -1,0 +1,46 @@
+extends ../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="messageView")
+    #mng-op.container-content.g-cont
+      .cards-container.esp-layout
+        .container-content.ttl-width
+          -let username = message.author ? message.author.name : 'no existe'
+          //- -if (message.author)
+          //-   h3.p-title Mensaje de : #{username}
+          //- -else
+          .inner
+            -if(message.author)
+              h3(style="text-align: center; margin-bottom: .625rem;") Mensaje de : #{username}
+            -else
+              h3(style="text-align: center; margin-bottom: .625rem;") Mensaje de : #{message.email}
+            .cards-container.esp-layout
+              .container-content.md-width
+                p Fecha de envío : #[span.date #{message.date.getDate()}/#{message.date.getUTCMonth() + 1}/#{message.date.getFullYear()}]
+                p De : #[span.date #{message.email}]
+                p Asunto : #[span.date #{message.subject}]
+                p Usuario :
+                  -if (message.author)
+                    #[a.date(href="javascript:void(0)") #{username}]
+                  -else
+                    span.date #{username}
+              .container-content.md-width
+                p Mensaje :
+                p.content #{message.content}
+          .inner
+            .form-container.container-content.ttl-width
+              -if(message.answer)
+                p Estado : #[span(style="color: #2ecc71;").date Responidido]
+              -else
+                p Estado : #[span(style="color: #e74c3c;").date Pendiente]
+              //- h2.p-title Contestar
+              -if(message.answer)
+                p Fecha de envío : #[span.date #{message.answer.date.getDate()}/#{message.answer.date.getUTCMonth() + 1}/#{message.answer.date.getFullYear()}]
+                p Respuesta :
+                p.content #{message.answer.content}
+              -else
+                form(action="/users/gestion/mensajes/#{message._id}/answer" method="POST")
+                  p Responder : 
+                  .input-row 
+                    textarea(name="content" id="content" rows="5" required)
+                  button.btn(type="submit") Enviar 
+        include ../partials/gestionNavigation.jade
