@@ -2,11 +2,11 @@ const router = require('express').Router();
 const ProjectGroup = require('../models/projectGroup');
 
 
-router.get('/especialidades/computacion', (req, res) => {
+router.get('/especialidades/programacion', (req, res) => {
     res.render('institucional/especialidades/computacion');
 });
 
-router.get('/especialidades/ade', (req, res) => {
+router.get('/especialidades/administracion-gestion', (req, res) => {
     res.render('institucional/especialidades/ADE');
 });
 
