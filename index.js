@@ -22,7 +22,6 @@ mongoose.connect('mongodb://localhost/ET24', {useNewUrlParser: true, useUnifiedT
         .then(() => console.log('Conectado con MongoDB.'))
         .catch(err => console.log(err));
 
-
 // define a jade como motor de vistas
 app.set('view engine', 'jade');
 
@@ -65,11 +64,6 @@ app.use((req, res, next) => {
 
 //monta el router con  el direccionamiento para las rutas de institucional
 app.use('/institucional', require('./routes/institucionalRouter'));
-//monta el router con  el direccionamiento para las rutas de sesion
-app.use('/users', require('./routes/authRouter'))
-app.use('/messages', require('./routes/messagesRouter'));
-app.use('/news', require('./routes/news'));
-
 
 // Direccionamiento basico
 app.get('/',(req, res) => {
