@@ -15,7 +15,7 @@ const addLocalStrategy = require('./localPassport-config') // estrategia de aute
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
 mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
