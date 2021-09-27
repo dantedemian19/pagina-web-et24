@@ -42,6 +42,9 @@ var userSchema = new Schema({
   date: {
     type: Date,
     default: new Date()
+  },
+   token: { 
+     type: String 
   }
 });
 
