@@ -101,6 +101,7 @@ header {
     height: 4.0625rem;
     border-bottom: 1px solid #e1e1e1;
     z-index: 15;
+    user-select: none;
 }
 
 @media screen and (max-width: 500px) {
@@ -108,47 +109,39 @@ header {
         position: absolute;
         right: 10px;
     }
-
     .footer-col:nth-child(1) {
         width: 100%;
         display: flex;
         justify-content: center;
     }
-
     .footer-col:nth-child(2) {
         width: 50%;
         position: relative;
         left: -40px;
     }
-
     .footer-col:nth-child(3) {
         width: 50%;
         margin-left: 5px;
     }
-
     .footer-col:nth-child(4) {
         width: 50%;
         position: relative;
         left: 80px;
     }
-
     .footer-redes {
         width: 50% !important;
         position: relative !important;
         left: 75px !important;
         top: 19px !important;
     }
-
     .social-links>.ul-footer {
         display: flex;
     }
-
     .social-links>.ul-footer>li:nth-child(3) {
         position: relative !important;
         top: 50px;
         right: 100.5px;
     }
-
     .social-links>.ul-footer>li:nth-child(4) {
         position: relative !important;
         top: 50px;
@@ -375,6 +368,7 @@ header a:hover img {
     min-width: 250px;
     position: absolute;
     top: 0;
+    margin-top: -10px;
     left: 100%;
     height: 100%;
 }
@@ -528,7 +522,7 @@ aside.contact {
 
 .contact-content h1 {
     font-family: "Anton", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
     letter-spacing: 0.25rem;
 }
@@ -704,6 +698,7 @@ main {
 .cards-container.center-items {
     align-items: center;
     justify-content: space-around;
+    user-select: none;
 }
 
 
@@ -714,6 +709,7 @@ main {
     width: 100%;
     margin: 1rem;
     border: none;
+    user-select: none;
 }
 
 #caminos-box .obj-box img {
@@ -729,6 +725,7 @@ main {
     transform: translateY(0);
     border-radius: 16px;
     border: 1.5px solid #dfaf1d;
+    user-select: text;
 }
 
 #caminos-box .obj-box .slider-content h1 {
@@ -884,11 +881,9 @@ main {
     25% {
         background-image: url("../images/biblioteca.jpg")
     }
-
     50% {
         background-image: url("../images/aula.jpg")
     }
-
     75% {
         background-image: url("../images/gabinete.jpg")
     }
@@ -907,6 +902,7 @@ main {
     height: 10%;
     width: 10%;
     padding-bottom: 2rem;
+    user-select: none;
 }
 
 .slider-content h1 {
@@ -959,11 +955,9 @@ main {
     0% {
         transform: rotate(0deg);
     }
-
     50% {
         transform: rotate(360deg);
     }
-
     100% {
         transform: rotate(0deg);
     }
@@ -1171,13 +1165,11 @@ button.ghost-form {
 }
 
 @keyframes show {
-
     0%,
     49.99% {
         opacity: 0;
         z-index: 1;
     }
-
     50%,
     100% {
         opacity: 1;
@@ -2572,9 +2564,9 @@ button#remove-group {
 
 .right-galeria {
     width: 50%;
-    height: 300px;
-    min-height: 200px;
-    background-color: #161616;
+    height: 15%;
+    min-height: 400px;
+    background-color: rgb(22, 22, 22, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2583,6 +2575,11 @@ button#remove-group {
     color: white;
     margin-left: -150px;
     text-transform: capitalize;
+    transition: all 0.5s ease;
+}
+
+.right-galeria:hover {
+    background-color: rgb(22, 22, 22);
 }
 
 .right-galeria h1 {
@@ -2615,9 +2612,11 @@ button#remove-group {
     color: white;
 }
 
-.segunda-fila-galeria {
+
+/* .segunda-fila-galeria {
     margin-top: -150px !important;
-}
+} 
+ REEMPLAZADO POR 'margin-top: -150px; EN RESPONSIVE */
 
 @media only screen and (max-width: 1200px) {
     .container-galeria {
@@ -2625,20 +2624,18 @@ button#remove-group {
         width: 100%;
         margin: 0 20px;
     }
-
     .left-galeria {
         width: 100%;
         height: 400px;
     }
-
     .right-galeria {
         width: 90%;
         margin: 0;
         margin-top: -100px;
     }
-
     .segunda-fila-galeria {
         padding-top: 200px;
+        margin-top: -150px;
     }
 }
 
@@ -2646,13 +2643,11 @@ button#remove-group {
     .left-galeria {
         width: 60%;
     }
-
     .right-galeria {
         width: 45%;
     }
-
     .segunda-fila-galeria {
-        margin-top: -250px !important;
+        margin-top: -200px;
     }
 }
 
