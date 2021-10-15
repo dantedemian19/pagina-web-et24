@@ -48,12 +48,21 @@ html(lang='en')
                 .sub-dropdown
                   a.nav-link.c-link(href="javascript:void(0)") Especialidades
                   .dropdown-nav-links.sub-dropdown-content
-                    a.nav-link.c-link(href="/institucional/especialidades/computacion") Computación
-                    a.nav-link.c-link(href="/institucional/especialidades/ade") Administración de Empresas
+                    a.nav-link.c-link(href="/institucional/especialidades/programacion") Informática profesional y personal en Programación
+                    a.nav-link.c-link(href="/institucional/especialidades/administracion-gestion") Gestión y Administración de las Organizaciones
                 a.nav-link.c-link(href="/institucional/equipod") Equipo Docente
-                a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
+                //- a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
           a.nav-link.c-link(href="/institucional/proyextra") Proyectos Extracurriculares
           a.nav-link(href="http://et24de17-caba.edu.ar/moodle30/" target="_blank") Plataforma Virtual
+        .btns-container
+          span.nav-link.show-menu-btn #[i.fas.fa-bars]
+          span.nav-link.contact-btn #[i.fas.fa-envelope]
+          if(typeof user != 'undefined')
+            #user.dropdown
+              span.nav-link #{user.name} #[i.fas.fa-user] #[i.fas.fa-chevron-down]
+              #u-dp.dropdown-content
+                  #u-op.dropdown-nav-links
+
       nav.res-navigation
         .nav-layer
         .nav-main
@@ -61,17 +70,14 @@ html(lang='en')
             .nav-content-layout
               a.nav-link.c-link(href="/") Inicio
               a.nav-link.sub-nav-p(href="javascript:void(0)") Institucional
+              a.nav-link.sub-nav-p(href="javascript:void(0)") Especialidades
               .sub-nav-links
-                a.nav-link.sub-nav-p(href="javascript:void(0)") Especialidades
-                .sub-nav-links
-                  a.nav-link.c-link(href="/institucional/especialidades/computacion") Computación
-                  a.nav-link.c-link(href="/institucional/especialidades/ade") Administración de Empresas
-                a.nav-link.c-link(href="/institucional/proyesc") Proyectos Escolares
-                a.nav-link.c-link(href="/institucional/proyextra") Proyectos Extracurriculares
-                //- a.nav-link(href="javascript:void(0)") Talleres
-                a.nav-link.c-link(href="/institucional/equipo-docente") Equipo Docente
-                a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
-                a.nav-link.c-link(href="/institucional/bi") Bachillerato Internacional
+                a.nav-link.c-link(href="/institucional/especialidades/programacion") Informática profesional y personal en Programación
+                a.nav-link.c-link(href="/institucional/especialidades/administracion-gestion") Gestión y Administración de las Organizaciones
+              a.nav-link.c-link(href="/institucional/equipo-docente") Equipo Docente
+              //- a.nav-link.c-link(href="/institucional/regimen-evaluacion") Régimen de Evaluación
+              a.nav-link.c-link(href="/institucional/proyextra") Proyectos Extracurriculares
+              a.nav-link(href="http://et24de17-caba.edu.ar/moodle30/" target="_blank") Plataforma Virtual
     aside.contact
       .layer
       .contact-content
@@ -90,40 +96,7 @@ html(lang='en')
             a(href="https://www.facebook.com/Peri%C3%B3dico-Escolar-ET-N%C2%BA-24-1607076049519806/" target="_blank") #[i.fab.fa-facebook-f] Periódico Escolar ET N°24
         iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13136.359323944864!2d-58.4957791!3d-34.6018899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4f587acd9ac33fe6!2sEt24!5e0!3m2!1ses-419!2sar!4v1603147338605!5m2!1ses-419!2sar" 
                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")
-        if(typeof user != 'undefined')  
-          if !user.hasAdministratorPermissions
-            .form-container.container-content.hlf-width
-              h3.p-title Envianos un mensaje
-              .errors
-              form#send-msg
-                .input-row 
-                  .lb-input  
-                    label(for="subject") Asunto
-                  input(type="text" id="subject" name="subject" required)
-                .input-row 
-                  .lb-input  
-                    label(for="message") Mensaje
-                  textarea(name="message" id="message" rows="5" required)
-                button.btn(type="submit") Enviar 
-        else
-          .form-container.container-content.hlf-width
-            h3.p-title Envianos un mensaje
-            .errors
-            form#send-msg
-              if(typeof user == 'undefined')
-                .input-row
-                  .lb-input  
-                    label(for="email") Email
-                  input(type="email" id="email" name="email" required)
-              .input-row 
-                .lb-input  
-                  label(for="subject") Asunto
-                input(type="text" id="subject" name="subject" required)
-              .input-row 
-                .lb-input  
-                  label(for="message") Mensaje
-                textarea(name="message" id="message" rows="5" required)
-              button.btn(type="submit") Enviar 
+         
     block contenido
     //---------------FOOTER-------------------------------
   script(defer src="https://unpkg.com/@barba/router" integrity="" crossorigin="anonymous")

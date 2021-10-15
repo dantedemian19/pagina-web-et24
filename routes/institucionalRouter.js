@@ -2,12 +2,12 @@ const router = require('express').Router();
 const ProjectGroup = require('../models/projectGroup');
 
 
-router.get('/especialidades/computacion', (req, res) => {
-  res.render('institucional/especialidades/computacion');
+router.get('/especialidades/programacion', (req, res) => {
+    res.render('institucional/especialidades/computacion');
 });
 
-router.get('/especialidades/ade', (req, res) => {
-  res.render('institucional/especialidades/ADE');
+router.get('/especialidades/administracion-gestion', (req, res) => {
+    res.render('institucional/especialidades/ADE');
 });
 
 // router.get('/proyesc', (req, res) => {
@@ -18,15 +18,19 @@ router.get('/especialidades/ade', (req, res) => {
 // });
 
 router.get('/regimen-evaluacion', (req, res) => {
-  res.render('institucional/reg');
+    res.render('institucional/reg');
 });
 
 router.get('/proyextra', (req, res) => {
-  res.render('institucional/proyextra');
+    res.render('institucional/proyextra');
 });
 
 router.get('/equipod', (req, res) => {
-  res.render('institucional/equipod');
+    res.render('institucional/equipod');
+});
+
+router.get('/idiomas', (req, res) => {
+    res.render('institucional/idiomas');
 });
 
 

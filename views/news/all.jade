@@ -1,0 +1,10 @@
+extends ../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="news_user")
+    .block
+        each singleNew in allNews 
+            div.newsContainer
+                h2=singleNew.title
+                p=singleNew.extract
+                a(href="/news/"+singleNew.id) Ver noticia completa
+            hr

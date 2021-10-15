@@ -1,38 +1,24 @@
-extends ../layout.jade
+extends ../../layout.jade
 block contenido
-  link(rel='stylesheet' href='../public/css/all.min.css')
   body
     main(data-barba='container' data-barba-namespace='proyextra')
       .title-bi
-        h1 Proyectos Extracurriculares
-      section.section-galeria
-        .container-galeria
-          .left-galeria.imagen1-galeria
-          .right-galeria
-            .content-galeria
-              h1(style='font-size: 35px;') Modelo ONU
-              p Nuestra escuela participa anualmente en el proyecto. Se busca representar el funcionamiento de las Naciones Unidas mediante la representación de los países en ese organismo internacional.
-        .container-galeria
-          .left-galeria.imagen2-galeria
-          .right-galeria
-            .content-galeria
-              h1 TedEd
-              p Nuestra escuela posee un club TED y pertenece a la comunidad TED Ed. Además participó en TED Ed Río de la Plata
-      section.segunda-fila-galeria.section-galeria
-        .container-galeria
-          .left-galeria.imagen3-galeria
-          .right-galeria
-            .content-galeria
-              h1 Radio ET24
-              p Contamos con nuestra propia radio, donde a través de Instagram transmitimos distintos actos y eventos.
-        .container-galeria
-          .left-galeria.imagen4-galeria
-          .right-galeria
-            .content-galeria
-              h1(style='font-size: 34px;') Mi factura Por Favor
-              p Es un concurso sobre educación tributaria, que apunta a generar conciencia como contribuyente
-
-      footer.footer
+        h1 Radio "Técnicamente 24"
+      .parent-cartas.container-cartas.container-arriba-cartas
+        .div1-cartas  
+        .div2-cartas
+          .texto-der-cartas
+            h2 Mañana juega la SCALONETA
+            p
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptate doloremque ipsa impedit veritatis. Voluptate beatae inventore id libero dolorem ut error dolore numquam molestias, et consequatur officiis, impedit reiciendis?
+      .parent-cartas.container-cartas.container-abajo-cartas
+        .div3-cartas
+          .texto-izq-cartas
+            h2 El domingo juega Lorenzo INSIGNE
+            p
+              | Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptate doloremque ipsa impedit veritatis. Voluptate beatae inventore id libero dolorem ut error dolore numquam molestias, et consequatur officiis, impedit reiciendis?
+        .div4-cartas
+      footer.footer(style="margin-top: 270px")
         .container-footer
           .row-footer
             .footer-col
@@ -97,5 +83,3 @@ block contenido
       .inferior
         p.derechos
           | 2021 Copyright © Derechos reservados Escuela Técnica N°24 D.E.17 "Defensa de Buenos Aires"
-
-    script(src='../../public/js/galeria.js')

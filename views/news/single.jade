@@ -1,0 +1,8 @@
+extends ../layout.jade
+block contenido
+  main(data-barba="container" data-barba-namespace="news_user")
+    .block 
+        .newsContainer
+            h3=singleNew.title
+            p=singleNew.body
+            a(href="/news") Volver

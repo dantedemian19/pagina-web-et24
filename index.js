@@ -1,5 +1,5 @@
 if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
+    require('dotenv').config()
 }
 //importa las paquetes necesarios
 const express = require('express'); // manejo de rutas
@@ -15,7 +15,7 @@ const addLocalStrategy = require('./localPassport-config') // estrategia de aute
 
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
 mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
@@ -37,9 +37,9 @@ app.use(methodOverride('_method'));
 
 app.use(cookieParser(process.env.SECRET));
 app.use(session({
-  secret: process.env.SECRET,
-  resave: true,
-  saveUninitialized: true
+    secret: process.env.SECRET,
+    resave: true,
+    saveUninitialized: true
 }));
 app.use(flash());
 
@@ -50,16 +50,16 @@ app.use(passport.session());
 
 // añade informacion util al objeto res.locals
 app.use((req, res, next) => {
-  if (req.isAuthenticated()) {
-    res.locals = {
-      user: {
-        _id: req.user._id,
-        hasAdministratorPermissions: req.user.hasAdministratorPermissions,
-        name: req.user.name,
-      }
+    if (req.isAuthenticated()) {
+        res.locals = {
+            user: {
+                _id: req.user._id,
+                hasAdministratorPermissions: req.user.hasAdministratorPermissions,
+                name: req.user.name,
+            }
+        }
     }
-  }
-  next();
+    next();
 });
 
 //monta el router con  el direccionamiento para las rutas de institucional
@@ -86,9 +86,9 @@ app.get('/', (req, res) => {
 
 //404 not found page
 app.use((req, res, next) => {
-  res.status(404).render('error');
+    res.status(404).render('error');
 });
 
 app.listen(PORT, () => {
-  console.log("server escuchando en el puerto *", PORT);
+    console.log("server escuchando en el puerto *", PORT);
 });

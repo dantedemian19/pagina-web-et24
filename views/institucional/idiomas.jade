@@ -1,0 +1,20 @@
+extends ../layout.jade
+block contenido
+    link(rel='stylesheet' href='../public/css/all.min.css')
+    body
+        main(data-barba='container' data-barba-namespace='proyextra')
+            .title-bi
+                h1 Idiomas
+            .languagesContainer
+                .languagesColumn.english
+                    h2.languagesTitle 🇬🇧 Inglés 🇺🇸
+                    p En el transcurso de los años de tu educación secundaria tendrás inglés como materia curricular que se divide en niveles para ajustarse a entendimiento del lenguaje.
+                    p En ambas especialidades verás contenido relacionado con la orientación elegida.
+                .lengugesPhoto
+                    img(src="/public/images/languages.jpg" alt="" srcset="")
+                .languagesColumn.german
+                    h2.languagesTitle 🇩🇪 Alemán 🇩🇪
+                    p Desde el primer año tenés la posibilidad de inscribirte y aprender Alemán en el colegio.
+                    p Al igual que en inglés, esta materia te permite certificar el conocimiento aprendido en un examen 
+                        a(href="https://www.buenosaires.gob.ar/educacion/idiomas/certificados-en-lenguas-extranjeras" target="_blank") CLE.
+            include ../partials/footer
