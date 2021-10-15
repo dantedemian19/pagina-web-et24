@@ -2733,3 +2733,11 @@ button#remove-group {
     margin-top: -20px;
     margin-bottom: 0;
 }
+
+/* -------------- PANTALLA DE INSCRIPCION -------------- */
+
+.container-inscribirse {
+    background-color: #0b0f35;
+    width: 90%;
+    margin: 0 5%;
+}

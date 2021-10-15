@@ -64,6 +64,9 @@ app.use((req, res, next) => {
 
 //monta el router con  el direccionamiento para las rutas de institucional
 app.use('/institucional', require('./routes/institucionalRouter'));
+app.get('/inscribirse', (req, res) => {
+    res.render('institucional/inscribirse')
+})
 
 // Direccionamiento basico
 app.get('/', (req, res) => {
