@@ -67,7 +67,21 @@ app.use('/institucional', require('./routes/institucionalRouter'));
 
 // Direccionamiento basico
 app.get('/', (req, res) => {
-    res.render('inicio');
+
+    anniversaryDay = 01;
+    anniversaryMonth = 04;
+    anniversaryYear = 1947;
+    let yearNow = new Date("02/04/2022").getFullYear();
+    let monthNow = new Date("02/04/2022").getMonth() + 1;
+    let dayNow = new Date("02/04/2022").getDate();
+
+    if (monthNow === anniversaryMonth && dayNow < anniversaryDay || monthNow < anniversaryMonth) {
+        var totalYears = yearNow - anniversaryYear - 1;
+    } else {
+        var totalYears = yearNow - anniversaryYear;
+    }
+
+    res.render('inicio', { totalYears });
 });
 
 //404 not found page

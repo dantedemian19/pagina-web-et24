@@ -1602,7 +1602,7 @@ h1.p-title {
 
 .p-item-title i.fa-minus-circle {
     display: none;
-    color: #09C5D8;
+    color: #578bde;
 }
 
 .p-section .list-item-container {
@@ -1610,7 +1610,7 @@ h1.p-title {
     height: 0;
     max-height: 700px;
     overflow-y: auto;
-    background: #f9f9f9;
+    background: #ece9ec;
 }
 
 .p-item-title.show+.list-item-container {
@@ -1633,7 +1633,7 @@ h1.p-title {
 
 .p-item-title.show span {
     transform: translateX(0.625rem);
-    color: #09C5D8;
+    color: #578bde;
 }
 
 .p-item-title.show i.fa-times-circle {
@@ -1923,7 +1923,7 @@ span.date::before {
     text-decoration: none;
     color: #fff;
     padding: 0.625rem 1rem;
-    background: #09C5D8;
+    background: #578bde;
 }
 
 .loading {
@@ -2574,7 +2574,7 @@ button#remove-group {
     border-radius: 8px;
     color: white;
     margin-left: -150px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all 0.5s ease;
 }
 
