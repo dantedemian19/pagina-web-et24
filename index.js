@@ -19,8 +19,8 @@ const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
 mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
-  .then(() => console.log('Conectado con MongoDB.'))
-  .catch(err => console.log(err));
+    .then(() => console.log('Conectado con MongoDB.'))
+    .catch(err => console.log(err));
 
 // define a jade como motor de vistas
 app.set('view engine', 'jade');
@@ -64,24 +64,27 @@ app.use((req, res, next) => {
 
 //monta el router con  el direccionamiento para las rutas de institucional
 app.use('/institucional', require('./routes/institucionalRouter'));
+app.get('/inscribirse', (req, res) => {
+    res.render('institucional/inscribirse')
+})
 
 // Direccionamiento basico
 app.get('/', (req, res) => {
 
-  anniversaryDay= 01;
-  anniversaryMonth =  04;
-  anniversaryYear = 1947;
-  let yearNow = new Date("02/04/2022").getFullYear();
-  let monthNow = new Date("02/04/2022").getMonth() + 1;
-  let dayNow = new Date("02/04/2022").getDate();
-  
-  if (monthNow === anniversaryMonth && dayNow < anniversaryDay || monthNow < anniversaryMonth) {
-    var totalYears = yearNow - anniversaryYear - 1;
-  } else {
-    var totalYears = yearNow - anniversaryYear;
-  }
+    anniversaryDay = 01;
+    anniversaryMonth = 04;
+    anniversaryYear = 1947;
+    let yearNow = new Date("02/04/2022").getFullYear();
+    let monthNow = new Date("02/04/2022").getMonth() + 1;
+    let dayNow = new Date("02/04/2022").getDate();
 
-  res.render('inicio', {totalYears});
+    if (monthNow === anniversaryMonth && dayNow < anniversaryDay || monthNow < anniversaryMonth) {
+        var totalYears = yearNow - anniversaryYear - 1;
+    } else {
+        var totalYears = yearNow - anniversaryYear;
+    }
+
+    res.render('inicio', { totalYears });
 });
 
 //404 not found page
