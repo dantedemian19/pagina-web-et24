@@ -1485,6 +1485,12 @@ button.ghost-form {
     width: 100%;
 }
 
+.hlf-width img.image {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(158, 158, 158);
+}
+
 .esp-layout p {
     padding: .5rem 0 1rem 0;
 }
@@ -2223,6 +2229,7 @@ button#remove-group {
 .row-footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .ul-footer {
@@ -2331,12 +2338,19 @@ button#remove-group {
     transform: scale(1.1) translateX(-3.3px);
 }
 
+.logo-footer {
+    width: calc(3206px / 24);
+    height: calc(3564px / 24);
+}
+
 .primera {
     margin-left: 20px;
 }
 
-.columna1 {
-    margin-left: 90px;
+.footer-col:nth-child(2) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .columna2 {
@@ -2347,12 +2361,6 @@ button#remove-group {
     margin-left: -30px;
     padding: auto;
     width: fit-content;
-}
-
-.columna-redes {
-    /* position: absolute; */
-    /* top: auto; */
-    width: 100%;
 }
 
 .ul-footer {
