@@ -104,48 +104,10 @@ header {
     user-select: none;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 830px) {
     .btns-container {
         position: absolute;
         right: 10px;
-    }
-    .footer-col:nth-child(1) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .footer-col:nth-child(2) {
-        width: 50%;
-        position: relative;
-        left: -40px;
-    }
-    .footer-col:nth-child(3) {
-        width: 50%;
-        margin-left: 5px;
-    }
-    .footer-col:nth-child(4) {
-        width: 50%;
-        position: relative;
-        left: 80px;
-    }
-    .footer-redes {
-        width: 50% !important;
-        position: relative !important;
-        left: 75px !important;
-        top: 19px !important;
-    }
-    .social-links>.ul-footer {
-        display: flex;
-    }
-    .social-links>.ul-footer>li:nth-child(3) {
-        position: relative !important;
-        top: 50px;
-        right: 100.5px;
-    }
-    .social-links>.ul-footer>li:nth-child(4) {
-        position: relative !important;
-        top: 50px;
-        right: 100.5px;
     }
 }
 
@@ -372,7 +334,6 @@ header a:hover img {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
 }
 
 .sub-dropdown:hover>.dropdown-nav-links {
@@ -1511,6 +1472,7 @@ button.ghost-form {
 
 .container-content li span {
     float: right;
+    background-color: red;
 }
 
 .c-btn {
@@ -2223,9 +2185,9 @@ button#remove-group {
 }
 
 .container-footer {
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 .row-footer {
@@ -2423,10 +2385,48 @@ button#remove-group {
 
 /*responsive*/
 
-@media(max-width: 767px) {
+@media(max-width: 830px) {
     .footer-col {
         width: 50%;
         margin-bottom: 30px;
+    }
+    .footer-col:nth-child(1) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-col:nth-child(2) {
+        width: 50%;
+        position: relative;
+        left: -40px;
+    }
+    .footer-col:nth-child(3) {
+        width: 50%;
+        margin-left: 5px;
+    }
+    .footer-col:nth-child(4) {
+        width: 50%;
+        position: relative;
+        left: 80px;
+    }
+    .footer-redes {
+        width: 50% !important;
+        position: relative !important;
+        left: 75px !important;
+        top: 19px !important;
+    }
+    .social-links>.ul-footer {
+        display: flex;
+    }
+    .social-links>.ul-footer>li:nth-child(3) {
+        position: relative !important;
+        top: 50px;
+        right: 100.5px;
+    }
+    .social-links>.ul-footer>li:nth-child(4) {
+        position: relative !important;
+        top: 50px;
+        right: 100.5px;
     }
 }
 
@@ -2592,7 +2592,7 @@ button#remove-group {
     background: url(../images/images-galeria/utn.jpg) no-repeat center / cover;
 }
 
-.right-galeria .readMore-link{
+.right-galeria .readMore-link {
     color: white;
 }
 
@@ -2768,7 +2768,6 @@ button#remove-group {
 }
 
 
-
 /* -------------- IDIOMAS -------------- */
 
 .languagesContainer {
@@ -2794,30 +2793,28 @@ button#remove-group {
     text-transform: uppercase;
 }
 
-.lengugesPhoto img{
+.lengugesPhoto img {
     height: 80vh;
 }
 
 
 /* Móviles horizontales y tablets verticales */
-@media screen and (max-width: 768px) {
 
+@media screen and (max-width: 768px) {
     /* Idiomas */
     .languagesContainer {
         flex-direction: column;
     }
-
     /* Proyectos extra */
-
-    .container-galeria{
+    .container-galeria {
         width: 80%;
     }
-
-    .right-galeria{
+    .right-galeria {
         min-height: 250px;
     }
-
 }
+
+
 /* -------------- PANTALLA DE INSCRIPCION -------------- */
 
 .container-inscribirse {
