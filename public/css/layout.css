@@ -2178,7 +2178,6 @@ button#remove-group {
 
 .footer {
     background: linear-gradient(to right, #0b0f35 -10%, #1044a7 80%, #578bde 160%);
-    /* background-color: #0b3c5d; */
     padding: 50px 0;
     position: relative;
     bottom: 0px;
@@ -2201,7 +2200,6 @@ button#remove-group {
 }
 
 .footer-col {
-    width: 25%;
     /* padding: 0 5px; */
     margin-left: -20px;
     flex-direction: row;
@@ -2303,12 +2301,9 @@ button#remove-group {
 }
 
 .logo-footer {
-    width: calc(3206px / 24);
-    height: calc(3564px / 24);
-}
-
-.primera {
-    margin-left: 20px;
+    width: calc(3206px / 30);
+    height: calc(3564px / 30);
+    margin-left: -85%;
 }
 
 .footer-col:nth-child(2) {
@@ -2332,8 +2327,7 @@ button#remove-group {
 }
 
 .footer-redes {
-    content: 50px;
-    width: fit-content;
+    max-width: 50%;
 }
 
 .social-links {
@@ -2386,54 +2380,42 @@ button#remove-group {
 /*responsive*/
 
 @media(max-width: 830px) {
-    .footer-col {
-        width: 50%;
-        margin-bottom: 30px;
+    .row-footer {
+        flex-direction: column;
+        margin-left: 37%;
     }
-    .footer-col:nth-child(1) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
+    .footer-col h4.etn24 {
+        margin-left: 3%;
     }
-    .footer-col:nth-child(2) {
-        width: 50%;
-        position: relative;
-        left: -40px;
+    .footer-col h4.etn24::before {
+        width: 130px;
     }
-    .footer-col:nth-child(3) {
-        width: 50%;
-        margin-left: 5px;
+    .descripcion {
+        margin-left: -10%;
+        text-align: center;
+        max-width: 200px;
     }
-    .footer-col:nth-child(4) {
-        width: 50%;
-        position: relative;
-        left: 80px;
+    .logo-footer {
+        width: calc(3206px / 35);
+        height: calc(3564px / 35);
+        margin-left: 30%;
+        margin-top: 2rem;
     }
     .footer-redes {
-        width: 50% !important;
-        position: relative !important;
-        left: 75px !important;
-        top: 19px !important;
+        margin-left: 10%;
     }
-    .social-links>.ul-footer {
-        display: flex;
+    .footer-col h4::before {
+        width: 58px;
     }
-    .social-links>.ul-footer>li:nth-child(3) {
-        position: relative !important;
-        top: 50px;
-        right: 100.5px;
-    }
-    .social-links>.ul-footer>li:nth-child(4) {
-        position: relative !important;
-        top: 50px;
-        right: 100.5px;
+    .social-links {
+        margin-left: 5%;
     }
 }
 
 @media(max-width: 574px) {
-    .footer-col {
+    /* .footer-col {
         width: 100%;
-    }
+    } */
 }
 
 
