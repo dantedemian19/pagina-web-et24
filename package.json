@@ -1,13 +1,14 @@
 {
   "name": "pagina-et24",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "pagina de la escuela",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js'",
     "dev": "nodemon index.js"
   },
-  "author": "Denis Luna, Lucas De La Pina, Nahuel Serruya, Lucas Gonzalez",
+  "author": "Denis Luna, Lucas De La Pina, Nahuel Serruya, Lucas Gonzalez, Alfonso Dante",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.0",

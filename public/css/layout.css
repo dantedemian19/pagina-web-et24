@@ -824,7 +824,7 @@ main {
     width: 100%;
     height: 100%;
     position: relative;
-    background-image: url("../images/pasillo.jpg");
+    background-image: url("../images/schoolPhotos/pasillo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     animation: slide 20s infinite;
@@ -842,13 +842,13 @@ main {
 
 @keyframes slide {
     25% {
-        background-image: url("../images/biblioteca.jpg")
+        background-image: url("../images/schoolPhotos/biblioteca.jpg")
     }
     50% {
-        background-image: url("../images/aula.jpg")
+        background-image: url("../images/schoolPhotos/aula.jpg")
     }
     75% {
-        background-image: url("../images/gabinete.jpg")
+        background-image: url("../images/schoolPhotos/gabinete.jpg")
     }
 }
 
@@ -963,7 +963,7 @@ main {
     right: 0;
     z-index: -1;
     transform-origin: center center 0;
-    background-image: url("../images/escuela-rescaled.jpg");
+    background-image: url("../images/schoolPhotos/escuela-rescaled.jpg");
     background-size: cover;
     background-position: fixed;
     background-attachment: fixed;
@@ -1497,7 +1497,7 @@ button.ghost-form {
     height: 100%;
     max-height: 520px;
     width: 100%;
-    background-image: url('../images/gabinete.jpg');
+    background-image: url('../images/schoolPhotos/gabinete.jpg');
     background-size: cover;
     background-position: 0% 70%;
     overflow: hidden;
