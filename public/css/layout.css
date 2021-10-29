@@ -824,7 +824,7 @@ main {
     width: 100%;
     height: 100%;
     position: relative;
-    background-image: url("../images/schoolPhotos/pasillo.jpg");
+    background-image: url("../images/schoolPhotos/pasillo.webp");
     background-repeat: no-repeat;
     background-size: cover;
     animation: slide 20s infinite;
@@ -842,13 +842,13 @@ main {
 
 @keyframes slide {
     25% {
-        background-image: url("../images/schoolPhotos/biblioteca.jpg")
+        background-image: url("../images/schoolPhotos/biblioteca.webp")
     }
     50% {
-        background-image: url("../images/schoolPhotos/aula.jpg")
+        background-image: url("../images/schoolPhotos/aula.webp")
     }
     75% {
-        background-image: url("../images/schoolPhotos/gabinete.jpg")
+        background-image: url("../images/schoolPhotos/gabinete.webp")
     }
 }
 
@@ -963,7 +963,7 @@ main {
     right: 0;
     z-index: -1;
     transform-origin: center center 0;
-    background-image: url("../images/schoolPhotos/escuela-rescaled.jpg");
+    background-image: url("../images/schoolPhotos/escuela-rescaled.webp");
     background-size: cover;
     background-position: fixed;
     background-attachment: fixed;
@@ -1507,13 +1507,11 @@ button.ghost-form {
 /* ------ESTILO LAMPARA PERRO------- */
 
 
-/* .lamp {
+.lamp {
     display: flex;
     max-height: 400px;
-} */
+} 
 
-
-/* 
 .containerlamp {
     color: white;
     background: rgb(22, 22, 22, 0.9);
@@ -1523,11 +1521,37 @@ button.ghost-form {
     height: 100%;
     text-align: center;
     border-radius: 5px 0 0 5px;
+    display: flex;
+    align-items: center;
 }
 
-.containerlamp p {
-    margin-top: 70%;
-} */
+@media screen and (max-height: 823px) {
+    .containerlamp {
+        width: 25%;
+        height: 31%;
+    }
+}
+
+@media screen and (max-height: 812px) {
+    .containerlamp {
+        width: 25%;
+        height: 28.5%;
+    }
+}
+
+@media screen and (max-height: 731px) {
+    .containerlamp {
+        width: 25%;
+        height: 35%;
+    }
+}
+
+@media screen and (max-height: 568px) {
+    .containerlamp {
+        width: 25%;
+        height: 34%;
+    }
+}
 
 
 /*------ PROYECTOS ESCOLARES ----------------------------------------------------- */
@@ -2566,39 +2590,39 @@ button#remove-group {
 }
 
 .left-galeria.imagen1-galeria {
-    background: url(../images/images-galeria/onu-banderas.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/onu-banderas.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen2-galeria {
-    background: url(../images/images-galeria/ted.jpg) no-repeat left / cover;
+    background: url(../images/images-galeria/ted.webp) no-repeat left / cover;
 }
 
 .left-galeria.imagen3-galeria {
-    background: url(../images/images-galeria/hackathon.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/hackathon.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen4-galeria {
-    background: url(../images/images-galeria/radio-logo.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/radio-logo.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen5-galeria {
-    background: url(../images/images-galeria/mifpv.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/mifpv.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen6-galeria {
-    background: url(../images/images-galeria/atletismo.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/atletismo.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen7-galeria {
-    background: url(../images/images-galeria/esi.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/esi.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen8-galeria {
-    background: url(../images/images-galeria/olimpiadas.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/olimpiadas.webp) no-repeat center / cover;
 }
 
 .left-galeria.imagen9-galeria {
-    background: url(../images/images-galeria/utn.jpg) no-repeat center / cover;
+    background: url(../images/images-galeria/utn.webp) no-repeat center / cover;
 }
 
 .right-galeria .readMore-link {
@@ -2802,8 +2826,13 @@ button#remove-group {
     text-transform: uppercase;
 }
 
+
 .lengugesPhoto img {
     height: 80vh;
+}
+
+.languagesIcons{
+    height: 1rem;
 }
 
 
