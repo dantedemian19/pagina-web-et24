@@ -2809,7 +2809,7 @@ button#remove-group {
     justify-content: space-around;
     align-items: center;
     gap: 30px;
-    margin-top: 15px;
+    margin: 50px 0;
     padding: 30px;
 }
 
@@ -2832,7 +2832,7 @@ button#remove-group {
 }
 
 .languagesIcons{
-    height: 1rem;
+    height: 1.5rem;
 }
 
 
@@ -2849,6 +2849,11 @@ button#remove-group {
     }
     .right-galeria {
         min-height: 250px;
+    }
+
+    .languagesContainer {
+        flex-direction: column;
+        margin: 100px 0;
     }
 }
 
