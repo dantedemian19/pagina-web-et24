@@ -1504,6 +1504,32 @@ button.ghost-form {
 }
 
 
+/* ------ESTILO LAMPARA PERRO------- */
+
+
+/* .lamp {
+    display: flex;
+    max-height: 400px;
+} */
+
+
+/* 
+.containerlamp {
+    color: white;
+    background: rgb(22, 22, 22, 0.9);
+    max-width: 200px;
+    max-height: 400px;
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    border-radius: 5px 0 0 5px;
+}
+
+.containerlamp p {
+    margin-top: 70%;
+} */
+
+
 /*------ PROYECTOS ESCOLARES ----------------------------------------------------- */
 
 .body-proy {
@@ -2368,7 +2394,7 @@ button#remove-group {
 }
 
 .inferior {
-    background-color: #161616;
+    background-color: #111111;
     color: white;
     font-size: 16px;
     text-align: center;
