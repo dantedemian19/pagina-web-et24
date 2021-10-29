@@ -1521,6 +1521,8 @@ button.ghost-form {
     height: 100%;
     text-align: center;
     border-radius: 5px 0 0 5px;
+    width: 25%;
+    height: 42%;
     display: flex;
     align-items: center;
 }
@@ -1528,14 +1530,14 @@ button.ghost-form {
 @media screen and (max-height: 823px) {
     .containerlamp {
         width: 25%;
-        height: 31%;
+        height: 54.5%;
     }
 }
 
 @media screen and (max-height: 812px) {
     .containerlamp {
         width: 25%;
-        height: 28.5%;
+        height: 54.5%;
     }
 }
 
@@ -2809,7 +2811,7 @@ button#remove-group {
     justify-content: space-around;
     align-items: center;
     gap: 30px;
-    margin-top: 15px;
+    margin: 50px 0;
     padding: 30px;
 }
 
@@ -2832,7 +2834,7 @@ button#remove-group {
 }
 
 .languagesIcons{
-    height: 1rem;
+    height: 1.5rem;
 }
 
 
@@ -2849,6 +2851,11 @@ button#remove-group {
     }
     .right-galeria {
         min-height: 250px;
+    }
+
+    .languagesContainer {
+        flex-direction: column;
+        margin: 100px 0;
     }
 }
 
