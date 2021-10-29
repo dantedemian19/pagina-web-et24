@@ -2802,6 +2802,11 @@ button#remove-group {
     text-transform: uppercase;
 }
 
+
+.lengugesPhoto img {
+    height: 80vh;
+}
+
 .languagesIcons{
     height: 1rem;
 }
