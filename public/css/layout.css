@@ -1530,14 +1530,14 @@ button.ghost-form {
 @media screen and (max-height: 823px) {
     .containerlamp {
         width: 25%;
-        height: 31%;
+        height: 54.5%;
     }
 }
 
 @media screen and (max-height: 812px) {
     .containerlamp {
         width: 25%;
-        height: 28.5%;
+        height: 54.5%;
     }
 }
 
