@@ -2177,7 +2177,8 @@ button#remove-group {
 /* FOOTER ----------------------------------------------------------- */
 
 .footer {
-    background: linear-gradient(to right, #0b0f35 -10%, #1044a7 80%, #578bde 160%);
+    /* background: linear-gradient(to right, #0b0f35 -10%, #1044a7 80%, #578bde 160%); */
+    background: #111111;
     padding: 50px 0;
     position: relative;
     bottom: 0px;
