@@ -1503,14 +1503,25 @@ button.ghost-form {
     overflow: hidden;
 }
 
+@media(max-width: 830px) {
+    .p-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 290px) {
+    .p-title {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* ------ESTILO LAMPARA PERRO------- */
-
 
 .lamp {
     display: flex;
     max-height: 400px;
-} 
+}
 
 .containerlamp {
     color: white;
@@ -2828,12 +2839,11 @@ button#remove-group {
     text-transform: uppercase;
 }
 
-
-.lengugesPhoto img {
+.languagesPhoto img {
     height: 80vh;
 }
 
-.languagesIcons{
+.languagesIcons {
     height: 1.5rem;
 }
 
@@ -2845,6 +2855,9 @@ button#remove-group {
     .languagesContainer {
         flex-direction: column;
     }
+    .languagesColumn p {
+        text-align: center;
+    }
     /* Proyectos extra */
     .container-galeria {
         width: 80%;
@@ -2852,10 +2865,12 @@ button#remove-group {
     .right-galeria {
         min-height: 250px;
     }
-
     .languagesContainer {
         flex-direction: column;
         margin: 100px 0;
+    }
+    .languagesPhoto img {
+        max-height: 35vh;
     }
 }
 
