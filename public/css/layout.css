@@ -1421,7 +1421,7 @@ button.ghost-form {
     width: 100%;
     margin: 0 auto;
     color: #464646;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .container-content.ttl-width {
