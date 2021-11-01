@@ -1611,6 +1611,7 @@ h1.p-title {
     width: 85%;
     transition: all .3s;
     margin-right: 1rem;
+    text-align: center;
 }
 
 .p-item-title:not(.show):hover span {
