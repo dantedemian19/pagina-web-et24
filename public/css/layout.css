@@ -2884,3 +2884,14 @@ button#remove-group {
     width: 90%;
     margin: 0 5%;
 }
+
+.img-secundaria-futuro__container{
+    width: inherit;
+    margin-top: 4%;
+}
+
+.img-secundaria-futuro{
+    width: inherit;
+    border-radius: 11px;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.75);
+}
