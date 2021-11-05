@@ -52,24 +52,8 @@ app.use(passport.session());
 
 // añade informacion util al objeto res.locals
 app.use((req, res, next) => {
-    if (req.isAuthenticated()) {
-        res.locals = {
-            user: {
-                _id: req.user._id,
-                hasAdministratorPermissions: req.user.hasAdministratorPermissions,
-                name: req.user.name,
-            }
-        }
-    }
-    next();
-});
 
-//monta el router con  el direccionamiento para las rutas de institucional
-app.use('/institucional', require('./routes/institucionalRouter'));
-
-// Direccionamiento basico
-app.get('/', (req, res) => {
-
+    
     anniversaryDay = 01;
     anniversaryMonth = 04;
     anniversaryYear = 1947;
@@ -82,8 +66,29 @@ app.get('/', (req, res) => {
     } else {
         var totalYears = yearNow - anniversaryYear;
     }
+    if (req.isAuthenticated()) {
+        res.locals = {
+            user: {
+                _id: req.user._id,
+                hasAdministratorPermissions: req.user.hasAdministratorPermissions,
+                name: req.user.name,
+                totalYears: totalYears, // Used in all footers
+            },
+        }
+    }
 
-    res.render('inicio', { totalYears });
+    res.locals = {
+        totalYears: totalYears, // Used in all footers  
+    }
+    next();
+});
+
+//monta el router con  el direccionamiento para las rutas de institucional
+app.use('/institucional', require('./routes/institucionalRouter'));
+
+// Direccionamiento basico
+app.get('/', (req, res) => {
+    res.render('inicio');
 });
 
 //404 not found page
