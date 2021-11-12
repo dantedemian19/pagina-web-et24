@@ -9,6 +9,7 @@ const bcrypt = require('bcrypt'); // encriptar (contraseñas)
 const cookieParser = require('cookie-parser'); // analiza las cookies
 const session = require('express-session'); // guarda la sesion
 const flash = require('express-flash') // enviar mensajes en redirects
+const serverless = require('serverless-http');// serverless
 const passport = require('passport'); // autenticacion de sesion
 const morgan = require('morgan');
 // const compression = require('compression');
@@ -99,3 +100,4 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
     console.log("server escuchando en el puerto *", PORT);
 });
+module.exports.handler = serverless(app);
