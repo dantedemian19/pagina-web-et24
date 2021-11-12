@@ -998,6 +998,16 @@ main {
 }
 
 
+/*------------------------AULA DEL FUTURO------------------------*/
+
+.img-secundaria-futuro img {
+    margin-top: 2rem;
+    width: 90%;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(158, 158, 158);
+}
+
+
 /* FORMULARIO ------------------------------POSIBLE BORRON--------------------------------------------------*/
 
 .overlay-right-form h1,
@@ -2373,6 +2383,7 @@ button#remove-group {
     width: calc(3206px / 30);
     height: calc(3564px / 30);
     margin-left: -85%;
+    user-select: none;
 }
 
 .footer-col:nth-child(2) {

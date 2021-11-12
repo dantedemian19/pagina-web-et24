@@ -13,16 +13,15 @@ const passport = require('passport'); // autenticacion de sesion
 const morgan = require('morgan');
 // const compression = require('compression');
 const addLocalStrategy = require('./localPassport-config') // estrategia de autenticacion
-
 const app = express();
 
 const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
-mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+/* mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => console.log('Conectado con MongoDB.'))
     .catch(err => console.log(err));
-
+ */
 // define a jade como motor de vistas
 // app.use(compression());
 app.set('view engine', 'jade');
@@ -37,13 +36,13 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-app.use(cookieParser(process.env.SECRET));
+/* app.use(cookieParser(process.env.SECRET));
 app.use(session({
     secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true
-}));
-app.use(flash());
+})); */
+//app.use(flash());
 
 // define la estrategia local para la autenticación de la sesion
 addLocalStrategy(passport)
