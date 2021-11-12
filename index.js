@@ -11,24 +11,27 @@ const session = require('express-session'); // guarda la sesion
 const flash = require('express-flash') // enviar mensajes en redirects
 const passport = require('passport'); // autenticacion de sesion
 const morgan = require('morgan');
-//var compression = require('compression');
+// const compression = require('compression');
 const addLocalStrategy = require('./localPassport-config') // estrategia de autenticacion
 
 const app = express();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
-/* mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => console.log('Conectado con MongoDB.'))
     .catch(err => console.log(err));
- */
+
 // define a jade como motor de vistas
-//app.use(compression()); 
+// app.use(compression());
+app.set('view engine', 'jade');
+
+// sirve la carpeta public con los archivos publicos
 app.use('/public', express.static('public'));
 
 // Debug del back
-//app.use(morgan("dev"));
+app.use(morgan("dev"));
 
 // premite extraer los datos del cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true }));
