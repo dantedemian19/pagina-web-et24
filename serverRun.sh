@@ -1,5 +1,5 @@
 #!/bin/bash
-cat > .env << EOF1
+cat > EOF1
 SECRET=MAUROSELACOME
-EOF1
+EOF1 << .env
 node index.js

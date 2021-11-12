@@ -1,7 +1,6 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
-const _dirname = "./";
 //importa las paquetes necesarios
 const express = require('express'); // manejo de rutas
 const mongoose = require('mongoose'); // conexion con la BD
@@ -28,7 +27,7 @@ const PORT = process.env.PORT || 80;
 app.set('view engine', 'jade');
 
 // sirve la carpeta public con los archivos publicos
-app.use(_dirname+'/public', express.static('public'));
+app.use('/public', express.static('public'));
 
 // Debug del back
 app.use(morgan("dev"));
@@ -84,10 +83,10 @@ app.use((req, res, next) => {
 });
 
 //monta el router con  el direccionamiento para las rutas de institucional
-app.use(_dirname+'/institucional', require(_dirname+'./routes/institucionalRouter'));
+app.use('/institucional', require('./routes/institucionalRouter'));
 
 // Direccionamiento basico
-app.get(_dirname+'/', (req, res) => {
+app.get('/', (req, res) => {
     res.render('inicio');
 });
 
