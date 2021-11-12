@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config()
 }
+const _dirname = "./";
 //importa las paquetes necesarios
 const express = require('express'); // manejo de rutas
 const mongoose = require('mongoose'); // conexion con la BD
@@ -12,8 +13,7 @@ const flash = require('express-flash') // enviar mensajes en redirects
 const passport = require('passport'); // autenticacion de sesion
 const morgan = require('morgan');
 // const compression = require('compression');
-const addLocalStrategy = require(_dirname+'./localPassport-config') // estrategia de autenticacion
-
+const addLocalStrategy = require('./localPassport-config') // estrategia de autenticacion
 const app = express();
 
 const PORT = process.env.PORT || 80;
