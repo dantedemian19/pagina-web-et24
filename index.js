@@ -9,27 +9,26 @@ const bcrypt = require('bcrypt'); // encriptar (contraseñas)
 const cookieParser = require('cookie-parser'); // analiza las cookies
 const session = require('express-session'); // guarda la sesion
 const flash = require('express-flash') // enviar mensajes en redirects
-const serverless = require('serverless-http');// serverless
 const passport = require('passport'); // autenticacion de sesion
 const morgan = require('morgan');
 // const compression = require('compression');
-const addLocalStrategy = require('./localPassport-config') // estrategia de autenticacion
+const addLocalStrategy = require(_dirname+'./localPassport-config') // estrategia de autenticacion
 
 const app = express();
 
 const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
-mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+/* mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => console.log('Conectado con MongoDB.'))
     .catch(err => console.log(err));
-
+ */
 // define a jade como motor de vistas
 // app.use(compression());
 app.set('view engine', 'jade');
 
 // sirve la carpeta public con los archivos publicos
-app.use('/public', express.static('public'));
+app.use(_dirname+'/public', express.static('public'));
 
 // Debug del back
 app.use(morgan("dev"));
@@ -85,10 +84,10 @@ app.use((req, res, next) => {
 });
 
 //monta el router con  el direccionamiento para las rutas de institucional
-app.use('/institucional', require('./routes/institucionalRouter'));
+app.use(_dirname+'/institucional', require(_dirname+'./routes/institucionalRouter'));
 
 // Direccionamiento basico
-app.get('/', (req, res) => {
+app.get(_dirname+'/', (req, res) => {
     res.render('inicio');
 });
 
@@ -100,4 +99,3 @@ app.use((req, res, next) => {
 app.listen(PORT, () => {
     console.log("server escuchando en el puerto *", PORT);
 });
-module.exports.handler = serverless(app);
