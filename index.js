@@ -42,7 +42,7 @@ app.use(session({
     resave: true,
     saveUninitialized: true
 })); */
-app.use(flash());
+//app.use(flash());
 
 // define la estrategia local para la autenticación de la sesion
 addLocalStrategy(passport)
