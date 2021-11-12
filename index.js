@@ -19,16 +19,16 @@ const app = express();
 const PORT = process.env.PORT || 80;
 
 // conecta con la base de datos
-mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
+/* mongoose.connect('mongodb://localhost/ET24', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
     .then(() => console.log('Conectado con MongoDB.'))
     .catch(err => console.log(err));
-
+ */
 // define a jade como motor de vistas
 //app.use(compression()); 
 app.use('/public', express.static('public'));
 
 // Debug del back
-app.use(morgan("dev"));
+//app.use(morgan("dev"));
 
 // premite extraer los datos del cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true }));
