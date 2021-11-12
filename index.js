@@ -36,12 +36,12 @@ app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 
-app.use(cookieParser(process.env.SECRET));
+/* app.use(cookieParser(process.env.SECRET));
 app.use(session({
     secret: process.env.SECRET,
     resave: true,
     saveUninitialized: true
-}));
+})); */
 app.use(flash());
 
 // define la estrategia local para la autenticación de la sesion
