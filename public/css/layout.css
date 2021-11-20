@@ -2269,12 +2269,14 @@ button#remove-group {
 .footer {
     /* background: linear-gradient(to right, #0b0f35 -10%, #1044a7 80%, #578bde 160%); */
     background: #111111;
-    padding: 50px 0;
+    padding: 50px 5px;
     position: relative;
     bottom: 0px;
 }
 
 .container-footer {
+    display: flex;
+    justify-content: space-around;
     max-width: 100%;
     margin: auto;
     /* padding: 0 10px; */
@@ -2291,19 +2293,27 @@ button#remove-group {
 }
 
 .footer-col {
-    /* padding: 0 5px; */
-    margin-left: -20px;
-    flex-direction: row;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+.footer-col.columna-logo{
+    align-items: center;
 }
 
 .footer-col h4 {
     font-size: 16px;
     color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     font-weight: 500;
     font-family: "Montserrat";
     position: relative;
+    width: 100%;
 }
 
 .footer-col h4.etn24 {
@@ -2321,10 +2331,6 @@ button#remove-group {
     width: 50px;
 }
 
-.footer-col ul li:not(:last-child) {
-    margin-bottom: 10px;
-}
-
 .footer-col ul li a {
     font-size: 16px;
     text-transform: capitalize;
@@ -2336,17 +2342,12 @@ button#remove-group {
     transition: all 0.3s ease;
 }
 
-.footer-col ul li a:hover {
-    color: #ffffff;
-    padding-left: 8px;
-}
-
 .footer-col .social-links a {
     display: inline-block;
     height: 40px;
     width: 40px;
     background-color: rgba(255, 255, 255, 0.2);
-    margin: 0 10px 10px 0;
+    margin: 5px;
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
@@ -2356,45 +2357,32 @@ button#remove-group {
 
 .footer-col .social-links .ig:hover {
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-    transform: scale(1.1);
-}
-
-.footer-col .social-links .ig:hover i {
-    transform: scale(1.1) translateX(-3.3px);
 }
 
 .footer-col .social-links .discord:hover {
     background: #7289da;
-    transform: scale(1.1);
-}
-
-.footer-col .social-links .discord:hover:hover i {
-    transform: scale(1.1) translateX(-3.3px);
 }
 
 .footer-col .social-links .facebook:hover {
     background: #3b5998;
-    transform: scale(1.1);
 }
 
-.footer-col .social-links .facebook:hover i {
-    transform: scale(1.1) translateX(-3.3px);
-}
 
 .footer-col .social-links .gmail:hover {
     background: #ea4335;
-    /* background: linear-gradient(to right, #4285f4, #bb001b, #ea4335, #fbbc05, #34a853); */
-    transform: scale(1.1);
 }
 
-.footer-col .social-links .gmail:hover:hover i {
-    transform: scale(1.1) translateX(-3.3px);
+.footer-col .social-links  i {
+    transition: all 0.2s ease;
+}
+
+.footer-col .social-links a:hover i {
+    transform: scale(1.3, 1.3);
 }
 
 .logo-footer {
     width: calc(3206px / 30);
     height: calc(3564px / 30);
-    margin-left: -85%;
     user-select: none;
 }
 
@@ -2418,10 +2406,6 @@ button#remove-group {
     margin-top: -10px;
 }
 
-.footer-redes {
-    max-width: 50%;
-}
-
 .social-links {
     display: flex;
     /* position: absolute; */
@@ -2433,13 +2417,7 @@ button#remove-group {
     margin-top: 1px;
 }
 
-.social-links ul li {
-    margin-top: -10px;
-}
-
 .descripcion {
-    width: 260px;
-    margin-top: -10px;
     transition: all 0.3s ease;
     font-size: 18px;
 }
@@ -2474,39 +2452,38 @@ button#remove-group {
 @media(max-width: 830px) {
     .row-footer {
         flex-direction: column;
-        margin-left: 37%;
+        /* margin-left: 37%; */
     }
     .footer-col h4.etn24 {
-        margin-left: 3%;
+        /* margin-left: 3%; */
     }
     .footer-col h4.etn24::before {
         width: 130px;
     }
-    .descripcion {
-        margin-left: -10%;
-        text-align: center;
-        max-width: 200px;
-    }
     .logo-footer {
-        width: calc(3206px / 35);
-        height: calc(3564px / 35);
-        margin-left: 30%;
-        margin-top: 2rem;
+        /* margin-left: 30%; */
+        /* margin-top: 2rem; */
     }
     .footer-redes {
-        margin-left: 10%;
+        /* margin-left: 10%; */
     }
     .footer-col h4::before {
         width: 58px;
     }
     .social-links {
-        margin-left: 5%;
+        margin: 0 auto;
+    }
+    .footer-redes-containter{
+        width: 100%;
     }
     .descripcion {
         width: auto;
     }
 }
 
+.footer-redes-containter{
+    align-self: center;
+}
 
 /* .footer{
   background-color: #4848EF;
@@ -2906,4 +2883,14 @@ button#remove-group {
     background-color: #0b0f35;
     width: 90%;
     margin: 0 5%;
+}
+
+.img-secundaria-futuro__container{
+    width: inherit;
+    margin-top: 4%;
+}
+
+.img-secundaria-futuro{
+    width: inherit;
+    border-radius: 11px;
 }
