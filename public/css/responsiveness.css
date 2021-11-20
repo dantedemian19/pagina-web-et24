@@ -132,4 +132,14 @@
     .title-bi h1 {
         font-size: 2rem;
     }
+    .ul-footer {
+        margin: 0 auto;
+    }
+    .container-footer{
+        flex-direction: column;
+    }
+    .ul-footer{
+        display: flex;
+        gap: 1rem;
+    }
 }
